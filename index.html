@@ -1,0 +1,1050 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CinemaDoc — документы для съёмочного проекта</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#2D5AFD',
+            ink: '#0E1628',
+            muted: '#64708A',
+            line: '#E6ECF6'
+          },
+          fontFamily: {
+            sans: ['Manrope', 'Arial', 'sans-serif']
+          },
+          boxShadow: {
+            button: '0 14px 32px rgba(45, 90, 253, .24)'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/screen-01-hero.css" />
+  <link rel="stylesheet" href="styles/screen-02-scenarios.css" />
+  <link rel="stylesheet" href="styles/screen-03-dashboard.css" />
+  <link rel="stylesheet" href="styles/screen-04-how.css" />
+  <link rel="stylesheet" href="styles/screen-05-armor.css" />
+  <link rel="stylesheet" href="styles/screen-06-team.css" />
+  <link rel="stylesheet" href="styles/screen-07-compare.css" />
+  <link rel="stylesheet" href="styles/screen-08-cases.css" />
+  <link rel="stylesheet" href="styles/screen-09-trust.css" />
+  <link rel="stylesheet" href="styles/screen-10-pricing.css" />
+  <link rel="stylesheet" href="styles/screen-11-faq.css" />
+  <link rel="stylesheet" href="styles/screen-12-readiness.css" />
+  <link rel="stylesheet" href="styles/screen-13-contact.css" />
+</head>
+<body class="font-sans antialiased">
+  <header class="sticky top-0 z-50 border-b border-line bg-white shadow-[0_10px_32px_rgba(37,57,104,.055)]">
+    <div class="mx-auto grid max-w-[1440px] grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-5 px-6 py-6 sm:px-8 lg:px-12">
+      <a href="#" class="text-[34px] font-extrabold tracking-[-0.075em] text-black" aria-label="CinemaDoc">
+        Cinema<span class="text-brand">Doc</span>
+      </a>
+
+      <div class="flex min-w-0 items-center justify-center">
+        <nav class="hidden items-center justify-center gap-7 text-[17px] font-extrabold tracking-[-0.025em] text-[#25314e] lg:flex xl:gap-10">
+          <a class="transition hover:text-brand" href="#">Главная</a>
+          <a class="transition hover:text-brand" href="#prices">Тарифы</a>
+          <a class="transition hover:text-brand" href="#about">Отзывы</a>
+          <a class="transition hover:text-brand" href="#start">Оставить заявку</a>
+          <a class="transition hover:text-brand" href="blog.html">Блог</a>
+        </nav>
+      </div>
+
+      <div class="hidden items-center justify-self-end sm:flex">
+        <div class="flex items-center gap-2">
+          <a href="https://t.me/cinemadoc" target="_blank" rel="noreferrer" class="grid h-11 w-11 place-items-center rounded-xl border border-line bg-white text-brand transition hover:-translate-y-0.5 hover:border-brand/30 hover:bg-blue-50" aria-label="CinemaDoc в Telegram">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.7 3.5 2.9 10.4c-1.2.5-1.2 1.2-.2 1.5l4.6 1.4L18 6.6c.5-.3.9-.1.6.2l-8.7 7.9-.3 4.7c.5 0 .8-.2 1.1-.5l2.6-2.5 4.5 3.3c.8.5 1.4.3 1.6-.8l2.9-13.7c.3-1.2-.4-1.7-1.6-1.2Z" />
+            </svg>
+          </a>
+          <a href="https://vk.com/cinemadoc" target="_blank" rel="noreferrer" class="grid h-11 w-11 place-items-center rounded-xl border border-line bg-white text-brand transition hover:-translate-y-0.5 hover:border-brand/30 hover:bg-blue-50" aria-label="CinemaDoc во ВКонтакте">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12.8 17.8c-5.5 0-8.6-3.8-8.8-10.1h2.8c.1 4.6 2.1 6.6 3.7 7V7.7h2.6v4c1.6-.2 3.3-2 3.9-4h2.6c-.4 2.5-2.2 4.3-3.4 5 .9.4 2.5 1.9 3.1 5.1h-2.9c-.6-1.9-2.1-3.4-3.3-3.6v3.6h-.3Z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- screen-01:start -->
+    <section class="mx-auto max-w-[1440px] px-6 pb-12 pt-14 sm:px-8 lg:px-12 lg:pb-16 lg:pt-20">
+      <div class="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_390px] xl:grid-cols-[minmax(0,1fr)_430px] xl:gap-20">
+        <div>
+          <h1 class="max-w-[920px] text-[48px] font-extrabold leading-[1.01] tracking-[-0.072em] text-black sm:text-[62px] xl:text-[76px]">
+            Документы, подрядчики и права съёмочного проекта
+            <span class="block text-brand">в одной системе</span>
+          </h1>
+
+          <p class="mt-7 max-w-[820px] text-[18px] font-medium leading-[1.82] tracking-[-0.022em] text-muted sm:text-[20px]">
+            CinemaDoc помогает продюсерам, видеопродакшенам и кинокомпаниям оформлять команду, подписывать документы онлайн и контролировать проект на всех этапах производства.
+          </p>
+
+          <div class="mt-9 flex flex-col gap-4 sm:flex-row">
+            <a href="#start" class="inline-flex h-[62px] items-center justify-center rounded-2xl bg-brand px-8 text-[17px] font-bold text-white shadow-button transition hover:-translate-y-0.5 hover:bg-[#244ff0] sm:min-w-[286px]">
+              Попробовать бесплатно
+            </a>
+            <a href="#demo" class="inline-flex h-[62px] items-center justify-center gap-4 rounded-2xl border border-brand/20 bg-white px-8 text-[17px] font-bold text-brand shadow-[0_10px_24px_rgba(45,90,253,.06)] transition hover:-translate-y-0.5 hover:bg-blue-50/70 sm:min-w-[245px]">
+              Посмотреть демо
+              <span class="flex h-7 w-7 items-center justify-center rounded-full border-2 border-brand">
+                <svg class="ml-0.5 h-3.5 w-3.5" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true">
+                  <path d="M3 1.55v8.9L10 6 3 1.55Z" />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-metric relative overflow-hidden rounded-[34px] p-7 sm:p-9 lg:p-8 xl:p-10">
+          <div class="metric-glow absolute -right-10 -top-8 h-40 w-40 rounded-full"></div>
+          <div class="relative">
+            <div class="text-[13px] font-extrabold uppercase tracking-[0.18em] text-brand/70">Команда оформлена</div>
+            <div class="mt-5 text-[104px] font-extrabold leading-[.84] tracking-[-0.12em] text-brand sm:text-[118px] lg:text-[110px] xl:text-[130px]">5x</div>
+            <div class="mt-4 text-[36px] font-extrabold leading-none tracking-[-0.075em] text-[#111827] sm:text-[40px]">
+              быстрее
+            </div>
+            <p class="mt-7 max-w-[320px] text-[15px] font-medium leading-[1.72] text-muted">
+              От первого договора до подписания без ручного переноса данных и потерянных документов в чатах.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="features" class="mx-auto max-w-[1440px] px-6 pb-20 sm:px-8 lg:px-12 lg:pb-24">
+      <div class="border-t border-line pt-8 sm:pt-10">
+        <div class="mb-6">
+          <div class="text-[12px] font-extrabold uppercase tracking-[0.18em] text-brand/70">Ключевые преимущества</div>
+          <h2 class="mt-2 text-[27px] font-bold tracking-[-0.055em] text-[#101828] sm:text-[32px]">Всё необходимое для оформления команды</h2>
+        </div>
+
+        <div class="grid gap-5 md:grid-cols-3">
+          <article class="benefit-card rounded-[26px] p-6 sm:p-7">
+            <div class="icon-box flex h-12 w-12 items-center justify-center rounded-2xl text-brand">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="8.5" />
+                <path d="M12 7.5v4.7l3.1 1.9" />
+                <path d="m8.1 16.1 1.7 1.7 3.2-3.2" />
+              </svg>
+            </div>
+            <div class="mt-5 text-[12px] font-extrabold uppercase tracking-[0.16em] text-brand/70">За минуты</div>
+            <h3 class="mt-3 text-[21px] font-bold leading-[1.2] tracking-[-0.045em] text-[#111827]">Документы создаются и подписываются за минуты</h3>
+          </article>
+
+          <article class="benefit-card rounded-[26px] p-6 sm:p-7">
+            <div class="icon-box flex h-12 w-12 items-center justify-center rounded-2xl text-brand">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="4" y="5" width="16" height="14" rx="3" />
+                <path d="M4 9h16" />
+                <path d="M9 15h3.5a1.75 1.75 0 1 0 0-3.5H10v5" />
+                <path d="M10 14h4" />
+              </svg>
+            </div>
+            <div class="mt-5 text-[12px] font-extrabold uppercase tracking-[0.16em] text-brand/70">Выгодно</div>
+            <h3 class="mt-3 text-[21px] font-bold leading-[1.2] tracking-[-0.045em] text-[#111827]">От 299 ₽ за документ, включая договор, приложение и акт</h3>
+          </article>
+
+          <article class="benefit-card rounded-[26px] p-6 sm:p-7">
+            <div class="icon-box flex h-12 w-12 items-center justify-center rounded-2xl text-brand">
+              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 3 5 5.8v5.4c0 4.2 2.8 8.1 7 9.8 4.2-1.7 7-5.6 7-9.8V5.8L12 3Z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+            </div>
+            <div class="mt-5 text-[12px] font-extrabold uppercase tracking-[0.16em] text-brand/70">Легитимно</div>
+            <h3 class="mt-3 text-[21px] font-bold leading-[1.2] tracking-[-0.045em] text-[#111827]">Подписание без бумаги и встреч с подрядчиками</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- screen-01:end -->
+
+    <!-- screen-02:start -->
+    <section id="scenarios" class="scenario-section">
+      <div class="scenario-shape -left-20 top-[29%] hidden h-[310px] w-[300px] -rotate-6 rounded-[76px] lg:block"></div>
+      <div class="scenario-shape -right-16 top-[25%] hidden h-[330px] w-[330px] rotate-[38deg] rounded-[120px] lg:block"></div>
+      <div class="absolute left-1/2 top-[44%] hidden h-[270px] w-[520px] -translate-x-1/2 rounded-full bg-brand/[.055] blur-[78px] lg:block"></div>
+
+      <div class="relative mx-auto flex min-h-[880px] max-w-[1440px] flex-col justify-center px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+        <div class="mx-auto max-w-[900px] text-center">
+          <div class="text-[12px] font-extrabold uppercase tracking-[0.18em] text-brand/70">Сценарии работы</div>
+          <h2 class="mt-4 text-[40px] font-extrabold leading-[1.06] tracking-[-0.068em] text-black sm:text-[54px] lg:text-[64px]">
+            Выберите свой <span class="text-brand">сценарий работы</span>
+          </h2>
+          <p class="mx-auto mt-5 max-w-[690px] text-[17px] font-medium leading-[1.75] tracking-[-0.018em] text-muted sm:text-[18px]">
+            CinemaDoc подстраивается под процессы вашего производства: от быстрого оформления съёмочной группы до полного контроля документов и прав по проекту.
+          </p>
+        </div>
+
+        <div class="mx-auto mt-12 grid w-full max-w-[1040px] gap-6 lg:grid-cols-2 lg:gap-8">
+          <article class="scenario-card flex min-h-[468px] flex-col rounded-[34px] p-7 sm:p-9 lg:p-10">
+            <div class="scenario-icon flex h-[104px] w-[104px] items-center justify-center rounded-full text-brand">
+              <svg class="h-14 w-14" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 23h38v28a4 4 0 0 1-4 4H18a4 4 0 0 1-4-4V23Z" />
+                <path d="M12 12.5 51 6l2.1 11.5L14.2 24 12 12.5Z" />
+                <path d="m19 11.4 7.5 10.3M30 9.5l7.4 10.3M41 7.7l7.4 10.2" />
+                <path d="M14 33h38" />
+                <path d="M25 43h16" />
+              </svg>
+            </div>
+
+            <h3 class="mt-8 text-[27px] font-extrabold leading-[1.15] tracking-[-0.055em] text-black sm:text-[31px]">Для рекламных продакшенов</h3>
+            <p class="mt-5 text-[17px] font-medium leading-[1.72] tracking-[-0.022em] text-[#415170] sm:text-[18px]">
+              Съёмка завтра? Оформите самозанятых, ИП и физических лиц в одном месте. Документы создаются и подписываются за минуты.
+            </p>
+
+            <a href="#start" class="mt-auto inline-flex items-center gap-3 pt-8 text-[18px] font-extrabold tracking-[-0.035em] text-brand transition hover:gap-4">
+              Перейти
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h13" />
+                <path d="m14 7 5 5-5 5" />
+              </svg>
+            </a>
+          </article>
+
+          <article class="scenario-card flex min-h-[468px] flex-col rounded-[34px] p-7 sm:p-9 lg:p-10">
+            <div class="scenario-icon flex h-[104px] w-[104px] items-center justify-center rounded-full text-brand">
+              <svg class="h-14 w-14" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="31" cy="31" r="22" />
+                <circle cx="31" cy="19" r="7" />
+                <circle cx="43" cy="31" r="7" />
+                <circle cx="31" cy="43" r="7" />
+                <circle cx="19" cy="31" r="7" />
+                <circle cx="31" cy="31" r="4.5" />
+                <path d="M50 46c2.2 4.3 4.9 6.2 8 6.2" />
+              </svg>
+            </div>
+
+            <h3 class="mt-8 text-[27px] font-extrabold leading-[1.15] tracking-[-0.055em] text-black sm:text-[31px]">Для кинокомпаний</h3>
+            <p class="mt-5 text-[17px] font-medium leading-[1.72] tracking-[-0.022em] text-[#415170] sm:text-[18px]">
+              Контроль документов и прав на всём жизненном цикле проекта. Подрядчики, РИД, история подписания и комплект документов для госотчётности всегда под рукой.
+            </p>
+
+            <a href="#start" class="mt-auto inline-flex items-center gap-3 pt-8 text-[18px] font-extrabold tracking-[-0.035em] text-brand transition hover:gap-4">
+              Перейти
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h13" />
+                <path d="m14 7 5 5-5 5" />
+              </svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- screen-02:end -->
+
+    <!-- screen-03:start -->
+    <section id="demo" class="screen-section dashboard-section bg-white px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+      <div class="mx-auto max-w-[1440px]">
+        <div class="mx-auto max-w-[820px] text-center">
+          <div class="text-[12px] font-extrabold uppercase tracking-[0.18em] text-brand/70">Кабинет проекта</div>
+          <h2 class="mt-4 text-[38px] font-extrabold leading-[1.08] tracking-[-0.065em] text-black sm:text-[52px] lg:text-[64px]">
+            Весь проект виден <span class="text-brand">на одном экране</span>
+          </h2>
+          <p class="mx-auto mt-5 max-w-[680px] text-[17px] font-medium leading-[1.75] tracking-[-0.018em] text-muted sm:text-[18px]">
+            Документы, подрядчики, статусы подписания и прогресс проекта собраны в едином рабочем пространстве.
+          </p>
+        </div>
+
+        <div class="dashboard-shell mt-12 overflow-hidden rounded-[30px] bg-white lg:grid lg:grid-cols-[236px_minmax(0,1fr)]">
+          <aside class="hidden border-r border-line/90 bg-white px-7 py-8 lg:flex lg:min-h-[660px] lg:flex-col">
+            <div class="text-[28px] font-extrabold tracking-[-0.075em] text-black">Cinema<span class="text-brand">Doc</span></div>
+            <nav class="mt-9 grid gap-3 text-[15px] font-bold tracking-[-0.02em] text-[#26344f]">
+              <a class="flex h-12 items-center gap-3 rounded-xl bg-blue-50 px-4 text-brand" href="#demo">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16v12H4z"/><path d="M8 7V5h8v2"/></svg>
+                Проекты
+              </a>
+              <a class="flex h-12 items-center gap-3 rounded-xl px-4" href="#features">
+                <svg class="h-5 w-5 text-[#6b7893]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg>
+                Документы
+              </a>
+              <a class="flex h-12 items-center gap-3 rounded-xl px-4" href="#cases">
+                <svg class="h-5 w-5 text-[#6b7893]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3"/><path d="M3 20c.8-3.2 3-5 6-5s5.2 1.8 6 5"/><path d="M16 11a3 3 0 1 0 0-6"/></svg>
+                Подрядчики
+              </a>
+              <a class="flex h-12 items-center gap-3 rounded-xl px-4" href="#faq">
+                <svg class="h-5 w-5 text-[#6b7893]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 5h14v14H5z"/><path d="M8 9h8M8 13h5"/></svg>
+                Архив
+              </a>
+            </nav>
+            <a class="mt-auto flex h-12 items-center gap-3 rounded-xl px-4 text-[15px] font-bold text-[#26344f]" href="#faq">
+              <svg class="h-5 w-5 text-[#6b7893]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"/><path d="M19.4 15a1.8 1.8 0 0 0 .36 2l.06.06-2.12 2.12-.06-.06a1.8 1.8 0 0 0-2-.36 1.8 1.8 0 0 0-1 1.64V20h-3v-.1a1.8 1.8 0 0 0-1-1.64 1.8 1.8 0 0 0-2 .36l-.06.06-2.12-2.12.06-.06a1.8 1.8 0 0 0 .36-2 1.8 1.8 0 0 0-1.64-1H5v-3h.1a1.8 1.8 0 0 0 1.64-1 1.8 1.8 0 0 0-.36-2l-.06-.06 2.12-2.12.06.06a1.8 1.8 0 0 0 2 .36 1.8 1.8 0 0 0 1-1.64V4h3v.1a1.8 1.8 0 0 0 1 1.64 1.8 1.8 0 0 0 2-.36l.06-.06 2.12 2.12-.06.06a1.8 1.8 0 0 0-.36 2 1.8 1.8 0 0 0 1.64 1h.1v3h-.1a1.8 1.8 0 0 0-1.64 1Z"/></svg>
+              Настройки
+            </a>
+          </aside>
+
+          <div class="px-5 py-7 sm:px-8 lg:px-9">
+            <div class="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
+              <div>
+                <div class="text-[15px] font-bold text-[#65728f]">Проекты <span class="px-3">/</span> Полярный свет</div>
+                <h3 class="mt-2 text-[31px] font-extrabold tracking-[-0.055em] text-black">Полярный свет</h3>
+              </div>
+              <div class="flex flex-wrap items-center gap-4">
+                <div class="flex h-11 min-w-[260px] items-center gap-3 rounded-xl border border-line bg-white px-4 text-[15px] font-semibold text-[#8a96ad]">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+                  Поиск
+                </div>
+                <div class="relative flex h-11 w-11 items-center justify-center text-[#26344f]">
+                  <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 7h18s-3 0-3-7"/><path d="M10 19a2 2 0 0 0 4 0"/></svg>
+                  <span class="absolute right-1 top-1 h-3 w-3 rounded-full border-2 border-white bg-brand"></span>
+                </div>
+                <div class="avatar-gradient flex h-11 w-11 items-center justify-center rounded-full text-[14px] font-extrabold text-[#24324f]">ИП</div>
+                <a href="#start" class="inline-flex h-11 items-center gap-2 rounded-xl bg-brand px-5 text-[15px] font-bold text-white shadow-button">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                  Создать
+                </a>
+              </div>
+            </div>
+
+            <div class="mt-6 flex flex-wrap gap-7 text-[15px] font-extrabold tracking-[-0.02em] text-[#4a5876]">
+              <span class="border-b-2 border-brand pb-3 text-brand">Обзор</span>
+              <span>Документы</span>
+              <span>Подрядчики</span>
+              <span>Файлы</span>
+            </div>
+
+            <div class="mt-4 grid gap-4 md:grid-cols-3">
+              <article class="dashboard-card rounded-[18px] bg-white p-5">
+                <div class="flex items-start justify-between text-[15px] font-bold text-[#34415e]"><span>Документы</span><span>›</span></div>
+                <div class="mt-5 text-[32px] font-extrabold leading-none tracking-[-0.06em] text-black">128</div>
+                <div class="mt-1 text-[14px] font-semibold text-[#34415e]">Всего документов</div>
+              </article>
+              <article class="dashboard-card rounded-[18px] bg-white p-5">
+                <div class="flex items-start justify-between text-[15px] font-bold text-[#34415e]"><span>На подписании</span><span>›</span></div>
+                <div class="mt-5 text-[32px] font-extrabold leading-none tracking-[-0.06em] text-black">14</div>
+                <div class="mt-1 text-[14px] font-semibold text-[#34415e]">Требуют действий</div>
+              </article>
+              <article class="dashboard-card rounded-[18px] bg-white p-5">
+                <div class="flex items-start justify-between text-[15px] font-bold text-[#34415e]"><span>Экономия времени</span><span>›</span></div>
+                <div class="mt-5 text-[32px] font-extrabold leading-none tracking-[-0.06em] text-black">5x</div>
+                <div class="mt-1 text-[14px] font-semibold text-[#34415e]">по сравнению с бумагой</div>
+              </article>
+            </div>
+
+            <div class="mt-5 grid gap-5 xl:grid-cols-[1.08fr_.92fr]">
+              <article class="dashboard-card rounded-[18px] bg-white p-6">
+                <h4 class="text-[18px] font-extrabold tracking-[-0.03em] text-black">Статусы документов</h4>
+                <div class="mt-7 grid items-center gap-6 sm:grid-cols-[166px_minmax(0,1fr)]">
+                  <div class="dashboard-donut grid h-[166px] w-[166px] place-items-center rounded-full"></div>
+                  <div class="grid gap-3 text-[14px] font-bold text-[#2f3d5a]">
+                    <div class="flex items-center justify-between gap-4"><span class="flex items-center gap-2"><i class="h-2.5 w-2.5 rounded-full bg-brand"></i>Подписаны</span><span>78 (61%)</span></div>
+                    <div class="flex items-center justify-between gap-4"><span class="flex items-center gap-2"><i class="h-2.5 w-2.5 rounded-full bg-[#75a8f6]"></i>На подписании</span><span>14 (11%)</span></div>
+                    <div class="flex items-center justify-between gap-4"><span class="flex items-center gap-2"><i class="h-2.5 w-2.5 rounded-full bg-[#9fd2f5]"></i>Черновики</span><span>18 (14%)</span></div>
+                    <div class="flex items-center justify-between gap-4"><span class="flex items-center gap-2"><i class="h-2.5 w-2.5 rounded-full bg-[#9ed7df]"></i>Согласование</span><span>10 (8%)</span></div>
+                    <div class="flex items-center justify-between gap-4"><span class="flex items-center gap-2"><i class="h-2.5 w-2.5 rounded-full bg-[#ff6148]"></i>Отклонены</span><span>8 (6%)</span></div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="dashboard-card rounded-[18px] bg-white p-6">
+                <h4 class="text-[18px] font-extrabold tracking-[-0.03em] text-black">Последние документы</h4>
+                <div class="mt-5 grid gap-4 text-[14px] font-bold">
+                  <div class="flex justify-between gap-3"><span>Договор с оператором</span><span class="text-[#20b15a]">Подписан</span></div>
+                  <div class="flex justify-between gap-3"><span>Акт выполненных работ</span><span class="text-brand">На подписании</span></div>
+                  <div class="flex justify-between gap-3"><span>Договор о секретности</span><span class="text-[#f28a16]">Согласование</span></div>
+                  <div class="flex justify-between gap-3"><span>Приложение №1</span><span class="text-[#667089]">Черновик</span></div>
+                  <div class="flex justify-between gap-3"><span>Договор аренды техники</span><span class="text-[#20b15a]">Подписан</span></div>
+                </div>
+                <a class="mt-7 inline-flex items-center gap-2 text-[17px] font-extrabold text-brand" href="#features">Все документы →</a>
+              </article>
+            </div>
+
+            <div class="mt-5 grid gap-5">
+              <article class="dashboard-card rounded-[18px] bg-white p-6">
+                <div class="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+                  <div>
+                    <h4 class="text-[18px] font-extrabold tracking-[-0.03em] text-black">Прогресс проекта</h4>
+                    <p class="mt-2 text-[14px] font-semibold leading-[1.55] text-[#667089]">Основной комплект документов готов, осталось дождаться нескольких подписаний.</p>
+                  </div>
+                  <div class="text-[36px] font-extrabold tracking-[-0.06em] text-black">68%</div>
+                </div>
+                <div class="mt-5 h-3 overflow-hidden rounded-full bg-[#eef2fa]"><span class="block h-full w-[68%] rounded-full bg-brand"></span></div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- screen-03:end -->
+
+    <!-- screen-04:start -->
+    <section id="how" class="screen-section px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+      <div class="mx-auto max-w-[1240px]">
+        <div class="grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+          <div class="process-intro lg:sticky lg:top-32">
+            <div class="text-[12px] font-extrabold uppercase tracking-[0.18em] text-brand/70">Путь документа</div>
+            <h2 class="mt-4 text-[40px] font-extrabold leading-[1.08] tracking-[-0.068em] text-black sm:text-[54px]">
+              Как работает <span class="text-brand">CinemaDoc</span>
+            </h2>
+            <p class="mt-6 text-[18px] font-medium leading-[1.72] tracking-[-0.018em] text-muted">
+              Процесс идёт по понятному маршруту: добавили подрядчика, получили комплект, отправили на подпись и сразу видите статус в кабинете.
+            </p>
+            <div class="mt-8 grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
+              <div class="process-chip">1 подрядчик = договор + приложение</div>
+              <div class="process-chip">акт не тратит лимит документов</div>
+              <div class="process-chip">статусы видны в проекте</div>
+            </div>
+          </div>
+
+          <ol class="process-timeline">
+            <li class="process-step">
+              <span class="process-number">01</span>
+              <div class="process-body">
+                <div class="process-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 42c1.5-6 5.2-9 11-9s9.5 3 11 9"/><circle cx="33" cy="22" r="8"/><path d="M48 23v14M41 30h14"/></svg></div>
+                <div>
+                  <h3>Добавляете подрядчика один раз</h3>
+                  <p>Реквизиты и контакты сохраняются в проекте. Для следующих документов не нужно заново копировать данные.</p>
+                </div>
+              </div>
+            </li>
+            <li class="process-step">
+              <span class="process-number">02</span>
+              <div class="process-body">
+                <div class="process-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h21l9 9v39H18z"/><path d="M39 8v11h11"/><path d="M25 31h16M25 41h12"/></svg></div>
+                <div>
+                  <h3>Система собирает комплект документов</h3>
+                  <p>Договор, приложение и акт формируются по данным проекта, без ручной верстки и поиска шаблонов.</p>
+                </div>
+              </div>
+            </li>
+            <li class="process-step">
+              <span class="process-number">03</span>
+              <div class="process-body">
+                <div class="process-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 43c10-9 17-18 20-27 1.2-3.7 7-2 6 2.2C41 28 32 37 18 48"/><path d="M16 50c9-1 18-1 31 0"/></svg></div>
+                <div>
+                  <h3>Подрядчик подписывает онлайн</h3>
+                  <p>Он получает ссылку, подписывает документ электронной подписью, а команда сразу видит изменение статуса.</p>
+                </div>
+              </div>
+            </li>
+            <li class="process-step">
+              <span class="process-number">04</span>
+              <div class="process-body">
+                <div class="process-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m16 23 16-8 16 8-16 8z"/><path d="m16 33 16 8 16-8"/><path d="m16 43 16 8 16-8"/></svg></div>
+                <div>
+                  <h3>Комплект хранится в кабинете проекта</h3>
+                  <p>Документы, подрядчики и история подписания остаются под рукой для производства, бухгалтерии и закрытия проекта.</p>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <!-- screen-04:end -->
+
+    <!-- screen-05:start -->
+    <section id="legal" class="screen-section bg-white px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+      <div class="mx-auto max-w-[1440px]">
+        <div class="mx-auto max-w-[860px] text-center">
+          <h2 class="text-[40px] font-extrabold leading-[1.1] tracking-[-0.068em] text-black sm:text-[56px] lg:text-[64px]">
+            Юридическая броня<br class="hidden sm:block" /> для <span class="text-brand">кино и видеопроизводства</span>
+          </h2>
+          <p class="mx-auto mt-6 max-w-[790px] text-[18px] font-medium leading-[1.75] tracking-[-0.018em] text-[#4d5a78] sm:text-[20px]">
+            CinemaDoc создан с учётом специфики киноиндустрии и работы с подрядчиками, правами и отчётностью.
+          </p>
+        </div>
+        <div class="mt-12 grid gap-6 lg:grid-cols-3">
+          <article class="armor-card rounded-[26px] bg-white p-9">
+            <div class="text-brand">
+              <svg class="h-16 w-16" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M32 7 14 14v14c0 11 7.2 20.2 18 24 10.8-3.8 18-13 18-24V14z"/><circle cx="32" cy="27" r="7"/><path d="M20 46c2.5-7 6.5-10.5 12-10.5S41.5 39 44 46"/></svg>
+            </div>
+            <h3 class="mt-8 text-[28px] font-extrabold leading-[1.25] tracking-[-0.045em] text-black">Разработано профильными медиа-юристами</h3>
+            <p class="mt-5 text-[20px] font-medium leading-[1.65] tracking-[-0.02em] text-[#4d5a78]">Документы учитывают специфику видеопроизводства, рекламы, сериалов и полного метра.</p>
+          </article>
+          <article class="armor-card rounded-[26px] bg-white p-9">
+            <div class="text-brand">
+              <svg class="h-16 w-16" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 43c10-9 17-18 20-27 1.2-3.7 7-2 6 2.2C41 28 32 37 18 48"/><path d="M16 50c9-1 18-1 31 0"/></svg>
+            </div>
+            <h3 class="mt-8 text-[28px] font-extrabold leading-[1.25] tracking-[-0.045em] text-black">100% юридически значимое подписание (63-ФЗ)</h3>
+            <p class="mt-5 text-[20px] font-medium leading-[1.65] tracking-[-0.02em] text-[#4d5a78]">Встроенная ПЭП через email равнозначна собственноручной подписи. Документы принимаются ФНС, судами и фондами.</p>
+          </article>
+          <article class="armor-card rounded-[26px] bg-white p-9">
+            <div class="text-brand">
+              <svg class="h-16 w-16" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="27" width="32" height="25" rx="4"/><path d="M22 27v-8a10 10 0 0 1 20 0v8"/><path d="M32 38v6"/></svg>
+            </div>
+            <h3 class="mt-8 text-[28px] font-extrabold leading-[1.25] tracking-[-0.045em] text-black">Безопасное хранение данных</h3>
+            <p class="mt-5 text-[20px] font-medium leading-[1.65] tracking-[-0.02em] text-[#4d5a78]">Современное шифрование и защищённые серверы. Ваши персональные данные, суммы договоров и подписанные акты под защитой.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- screen-05:end -->
+
+    <!-- screen-06:start -->
+    <section id="team" class="screen-section team-section px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+      <div class="mx-auto max-w-[1240px]">
+        <div class="mx-auto max-w-[900px] text-center">
+          <div class="text-[12px] font-extrabold uppercase tracking-[0.18em] text-brand/70">Наша команда</div>
+          <h2 class="mt-4 text-[40px] font-extrabold leading-[1.1] tracking-[-0.068em] text-black sm:text-[56px]">
+            Люди, которые соединяют <span class="text-brand">кино, право и продукт</span>
+          </h2>
+        </div>
+
+        <div class="mt-12 grid gap-7 lg:grid-cols-2 lg:items-stretch">
+          <div class="team-copy rounded-[30px] bg-white p-7 sm:p-9">
+            <h3 class="text-[30px] font-extrabold leading-[1.15] tracking-[-0.055em] text-black sm:text-[36px]">Команда, которая знает производство изнутри</h3>
+            <p class="mt-6 text-[18px] font-medium leading-[1.75] tracking-[-0.018em] text-[#4d5a78]">
+            CinemaDoc делают специалисты, которые понимают темп съёмочного процесса, юридические риски и то, как продюсеру важно быстро видеть порядок в документах.
+            </p>
+            <div class="team-metrics mt-8 grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+              <div class="team-metric"><b>60+</b><span>проектов в суммарном опыте команды</span></div>
+              <div class="team-metric"><b>20+</b><span>лет опыта в кино, рекламе и продакшене</span></div>
+              <div class="team-metric"><b>3</b><span>ключевые экспертизы: право, производство, продукт</span></div>
+            </div>
+          </div>
+
+          <div class="team-panel rounded-[30px] bg-white p-5 sm:p-6">
+            <div class="team-photo-frame">
+              <img src="Danya.jpg" alt="Участник команды CinemaDoc" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- screen-06:end -->
+
+    <!-- screen-07:start -->
+    <section id="comparison" class="screen-section bg-white px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+      <div class="mx-auto max-w-[1240px]">
+        <h2 class="text-center text-[40px] font-extrabold leading-[1.1] tracking-[-0.068em] text-black sm:text-[54px]">Как было раньше и как теперь</h2>
+        <div class="mt-12 grid items-stretch gap-8 lg:grid-cols-[1fr_auto_1fr]">
+          <article class="compare-card compare-card-old rounded-[30px] bg-white p-8">
+            <h3 class="text-[28px] font-extrabold tracking-[-0.04em] text-[#31405f]">Раньше процесс распадался</h3>
+            <div class="mt-7 grid gap-4 text-[18px] font-semibold leading-[1.35] tracking-[-0.03em] text-[#465472]">
+              <div class="compare-row"><span class="compare-icon">01</span>Шаблон ищут в старых папках и чатах</div>
+              <div class="compare-row"><span class="compare-icon">02</span>Данные подрядчика копируют вручную</div>
+              <div class="compare-row"><span class="compare-icon">03</span>Подписание живёт в почте и мессенджерах</div>
+              <div class="compare-row"><span class="compare-icon">04</span>Акты теряются после съёмки</div>
+              <div class="compare-row"><span class="compare-icon">05</span>Продюсер вручную проверяет, кто подписал</div>
+            </div>
+          </article>
+          <div class="compare-switch mx-auto grid h-16 w-16 place-items-center rounded-full bg-white text-brand shadow-[0_12px_28px_rgba(45,90,253,.16)] lg:mx-0 lg:self-center">
+            <svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14"/><path d="m14 7 5 5-5 5"/></svg>
+          </div>
+          <article class="compare-card compare-card-new rounded-[30px] bg-white p-8">
+            <h3 class="text-[28px] font-extrabold tracking-[-0.04em] text-brand">Теперь всё идёт одним потоком</h3>
+            <div class="mt-7 grid gap-4 text-[18px] font-semibold leading-[1.35] tracking-[-0.03em] text-[#26344f]">
+              <div class="compare-row"><span class="compare-icon">01</span>Документы собираются по данным проекта</div>
+              <div class="compare-row"><span class="compare-icon">02</span>Подрядчик получает ссылку на подписание</div>
+              <div class="compare-row"><span class="compare-icon">03</span>Статусы видны в кабинете</div>
+              <div class="compare-row"><span class="compare-icon">04</span>Акты хранятся вместе с договором</div>
+              <div class="compare-row"><span class="compare-icon">05</span>Команда быстро понимает, что готово</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- screen-07:end -->
+
+    <!-- screen-08:start -->
+    <section id="cases" class="screen-section px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+      <div class="mx-auto max-w-[1440px]">
+        <h2 class="text-center text-[38px] font-extrabold leading-[1.1] tracking-[-0.065em] text-black sm:text-[52px]">
+          Как <span class="text-brand">CinemaDoc</span> помогает проектам
+        </h2>
+        <div class="mt-9 grid gap-6 lg:grid-cols-2">
+          <article class="case-card rounded-[24px] bg-white p-6">
+            <div class="grid gap-7 md:grid-cols-[220px_minmax(0,1fr)]">
+              <div>
+                <div class="text-brand"><svg class="h-16 w-16" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M12 22h28v24H12z"/><path d="m40 28 12-6v24l-12-6z"/><circle cx="18" cy="18" r="5"/></svg></div>
+                <h3 class="mt-6 text-[24px] font-extrabold leading-[1.25] tracking-[-0.04em] text-black">Видеопродакшен</h3>
+                <div class="mt-5 flex flex-wrap gap-2"><span class="rounded-md border border-[#bdcaf4] px-2.5 py-1 text-[13px] font-bold text-[#4b5b80]">12 подрядчиков</span><span class="rounded-md border border-[#bdcaf4] px-2.5 py-1 text-[13px] font-bold text-[#4b5b80]">36 документов</span></div>
+              </div>
+              <div class="grid gap-4 text-[15px] font-medium leading-[1.5] text-[#303c59]">
+                <p><b class="mr-8 text-brand">Задача</b>Оформить 12 подрядчиков до съёмочного дня.</p>
+                <p><b class="mr-5 text-brand">Проблема</b>Команда меняется быстро, договоры и акты легко теряются в чатах.</p>
+                <p><b class="mr-6 text-brand">Решение</b>Пакет документов формируется автоматически, подрядчики подписывают онлайн.</p>
+                <p><b class="mr-5 text-brand">Результат</b>36 документов собраны в проекте, продюсер видит статусы без ручного контроля.</p>
+              </div>
+            </div>
+            <div class="case-economy mt-6 grid gap-3 border-t border-line pt-5 sm:grid-cols-3"><span>Юрист вручную<br><b>≈ 45 000 ₽</b></span><span>CinemaDoc<br><b>6 990 ₽</b></span><span>Экономия<br><b>≈ 38 000 ₽</b></span></div>
+          </article>
+          <article class="case-card rounded-[24px] bg-white p-6">
+            <div class="grid gap-7 md:grid-cols-[220px_minmax(0,1fr)]">
+              <div>
+                <div class="text-brand"><svg class="h-16 w-16" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M15 24h38v28H15z"/><path d="M13 13 52 7l2 11-39 6z"/><path d="m20 12 7 10M31 10l7 10M42 8l7 10"/></svg></div>
+                <h3 class="mt-6 text-[24px] font-extrabold leading-[1.25] tracking-[-0.04em] text-black">Игровое кино и сериалы</h3>
+                <div class="mt-5 flex flex-wrap gap-2"><span class="rounded-md border border-[#bdcaf4] px-2.5 py-1 text-[13px] font-bold text-[#4b5b80]">80+ участников</span><span class="rounded-md border border-[#bdcaf4] px-2.5 py-1 text-[13px] font-bold text-[#4b5b80]">120 документов</span></div>
+              </div>
+              <div class="grid gap-4 text-[15px] font-medium leading-[1.5] text-[#303c59]">
+                <p><b class="mr-8 text-brand">Задача</b>Оформить большой состав и не потерять документы по отделам.</p>
+                <p><b class="mr-5 text-brand">Проблема</b>Много подрядчиков, параллельные смены и постоянные новые приложения.</p>
+                <p><b class="mr-6 text-brand">Решение</b>Пакет «Кино» закрывает объём документов с запасом для проекта.</p>
+                <p><b class="mr-5 text-brand">Результат</b>Продюсер видит комплект и статусы подписания в одном кабинете.</p>
+              </div>
+            </div>
+            <div class="case-economy mt-6 grid gap-3 border-t border-line pt-5 sm:grid-cols-3"><span>Юрист вручную<br><b>≈ 240 000 ₽</b></span><span>CinemaDoc<br><b>14 990 ₽</b></span><span>Экономия<br><b>≈ 225 000 ₽</b></span></div>
+          </article>
+          <article class="case-card rounded-[24px] bg-white p-6">
+            <div class="grid gap-7 md:grid-cols-[220px_minmax(0,1fr)]">
+              <div>
+                <div class="text-brand"><svg class="h-16 w-16" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5"><circle cx="28" cy="31" r="21"/><circle cx="28" cy="18" r="6"/><circle cx="40" cy="31" r="6"/><circle cx="28" cy="44" r="6"/><circle cx="16" cy="31" r="6"/></svg></div>
+                <h3 class="mt-6 text-[24px] font-extrabold leading-[1.25] tracking-[-0.04em] text-black">Документальное кино</h3>
+                <div class="mt-5 flex flex-wrap gap-2"><span class="rounded-md border border-[#bdcaf4] px-2.5 py-1 text-[13px] font-bold text-[#4b5b80]">15 участников</span><span class="rounded-md border border-[#bdcaf4] px-2.5 py-1 text-[13px] font-bold text-[#4b5b80]">Ограниченный бюджет</span></div>
+              </div>
+              <div class="grid gap-4 text-[15px] font-medium leading-[1.5] text-[#303c59]">
+                <p><b class="mr-8 text-brand">Задача</b>Оформить небольшую команду без штатного юриста.</p>
+                <p><b class="mr-5 text-brand">Проблема</b>Бюджет ограничен, а документы всё равно нужны до начала работ.</p>
+                <p><b class="mr-6 text-brand">Решение</b>Подобрать пакет по числу подрядчиков и подписать онлайн.</p>
+                <p><b class="mr-5 text-brand">Результат</b>Команда получает понятный комплект без лишней юридической нагрузки.</p>
+              </div>
+            </div>
+            <div class="case-economy mt-6 grid gap-3 border-t border-line pt-5 sm:grid-cols-3"><span>Юрист вручную<br><b>≈ 60 000 ₽</b></span><span>CinemaDoc<br><b>6 990 ₽</b></span><span>Экономия<br><b>≈ 53 000 ₽</b></span></div>
+          </article>
+          <article class="case-card rounded-[24px] bg-white p-6">
+            <div class="grid gap-7 md:grid-cols-[220px_minmax(0,1fr)]">
+              <div>
+                <div class="text-brand"><svg class="h-16 w-16" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M18 12v40M32 12v40M46 12v40"/><path d="M12 20h12M26 32h12M40 44h12"/><circle cx="18" cy="20" r="4"/><circle cx="32" cy="32" r="4"/><circle cx="46" cy="44" r="4"/></svg></div>
+                <h3 class="mt-6 text-[24px] font-extrabold leading-[1.25] tracking-[-0.04em] text-black">Постпродакшен и графика</h3>
+                <div class="mt-5 flex flex-wrap gap-2"><span class="rounded-md border border-[#bdcaf4] px-2.5 py-1 text-[13px] font-bold text-[#4b5b80]">Монтаж, цвет, звук, VFX</span><span class="rounded-md border border-[#bdcaf4] px-2.5 py-1 text-[13px] font-bold text-[#4b5b80]">40 документов</span></div>
+              </div>
+              <div class="grid gap-4 text-[15px] font-medium leading-[1.5] text-[#303c59]">
+                <p><b class="mr-8 text-brand">Задача</b>Закрыть договоры с фрилансерами постпродакшена.</p>
+                <p><b class="mr-5 text-brand">Проблема</b>Много коротких задач, разные исполнители и быстрые дедлайны.</p>
+                <p><b class="mr-6 text-brand">Решение</b>Оформлять каждого подрядчика по единому сценарию из кабинета.</p>
+                <p><b class="mr-5 text-brand">Результат</b>Документы не разлетаются по чатам, статусы и акты остаются в проекте.</p>
+              </div>
+            </div>
+            <div class="case-economy mt-6 grid gap-3 border-t border-line pt-5 sm:grid-cols-3"><span>Юрист вручную<br><b>≈ 75 000 ₽</b></span><span>CinemaDoc<br><b>6 990 ₽</b></span><span>Экономия<br><b>≈ 68 000 ₽</b></span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- screen-08:end -->
+
+    <!-- screen-09:start -->
+    <section id="about" class="screen-section bg-white px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+      <div class="mx-auto max-w-[1440px]">
+        <div class="max-w-[760px] lg:ml-[260px]">
+          <h2 class="text-[40px] font-extrabold leading-[1.12] tracking-[-0.068em] text-black sm:text-[56px]">
+            Нам <span class="text-brand">доверяют</span> продюсеры и команды
+          </h2>
+          <p class="mt-6 text-[17px] font-medium leading-[1.75] text-[#33415f]">Кино, реклама, сериалы и контент — десятки команд уже перешли на CinemaDoc и экономят часы каждую неделю.</p>
+        </div>
+
+        <div class="mt-12 grid gap-7 lg:grid-cols-4">
+          <article class="testimonial-card flex min-h-[330px] flex-col rounded-[24px] bg-white p-8">
+            <div class="text-[52px] font-extrabold leading-none text-brand">“</div>
+            <p class="mt-6 text-[17px] font-medium leading-[1.75] text-[#25314e]">С CinemaDoc мы закрываем договоры за минуты, а не дни. Особенно на съёмках, где всё меняется каждый день.</p>
+            <div class="mt-auto flex items-center gap-4 pt-8"><span class="avatar-gradient grid h-12 w-12 place-items-center rounded-full text-sm font-extrabold">АВ</span><div><b class="block text-[16px] font-extrabold text-black">Алексей Воронов</b><span class="text-[14px] font-medium text-[#66718c]">Продюсер</span></div></div>
+          </article>
+          <article class="testimonial-card flex min-h-[330px] flex-col rounded-[24px] bg-white p-8">
+            <div class="text-[52px] font-extrabold leading-none text-brand">“</div>
+            <p class="mt-6 text-[17px] font-medium leading-[1.75] text-[#25314e]">Очень удобно, что всё уже готово под индустрию: акты, договоры, приложения. Никаких юристов на каждый проект.</p>
+            <div class="mt-auto flex items-center gap-4 pt-8"><span class="avatar-gradient grid h-12 w-12 place-items-center rounded-full text-sm font-extrabold">МС</span><div><b class="block text-[16px] font-extrabold text-black">Мария Соколова</b><span class="text-[14px] font-medium text-[#66718c]">Линейный продюсер</span></div></div>
+          </article>
+          <article class="testimonial-card flex min-h-[330px] flex-col rounded-[24px] bg-white p-8">
+            <div class="text-[52px] font-extrabold leading-none text-brand">“</div>
+            <p class="mt-6 text-[17px] font-medium leading-[1.75] text-[#25314e]">Юридически надёжно и при этом просто. Проверки проходят спокойно, документы всегда под рукой.</p>
+            <div class="mt-auto flex items-center gap-4 pt-8"><span class="avatar-gradient grid h-12 w-12 place-items-center rounded-full text-sm font-extrabold">ИЛ</span><div><b class="block text-[16px] font-extrabold text-black">Игорь Лебедев</b><span class="text-[14px] font-medium text-[#66718c]">Исполнительный продюсер</span></div></div>
+          </article>
+          <article class="testimonial-card flex min-h-[330px] flex-col rounded-[24px] bg-white p-8">
+            <div class="text-[52px] font-extrabold leading-none text-brand">“</div>
+            <p class="mt-6 text-[17px] font-medium leading-[1.75] text-[#25314e]">Экономим время всей команды и не теряем фокус на креативе. Это именно тот сервис, которого нам не хватало.</p>
+            <div class="mt-auto flex items-center gap-4 pt-8"><span class="avatar-gradient grid h-12 w-12 place-items-center rounded-full text-sm font-extrabold">ЕМ</span><div><b class="block text-[16px] font-extrabold text-black">Екатерина Морозова</b><span class="text-[14px] font-medium text-[#66718c]">Продюсер постпродакшна</span></div></div>
+          </article>
+        </div>
+
+        <div class="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="flex items-start gap-4 text-[#25314e]"><span class="text-brand"><svg class="h-12 w-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="8" r="3"/><path d="M2 20c.8-3 2.8-5 6-5s5.2 2 6 5"/><path d="M12 20c.7-2.5 2.4-4.2 5-4.2 2.8 0 4.4 1.8 5 4.2"/></svg></span><p><b class="block text-[30px] font-extrabold tracking-[-0.05em] text-brand">500+</b><span class="text-[14px] font-bold leading-[1.55]">команд используют CinemaDoc</span></p></div>
+          <div class="flex items-start gap-4 text-[#25314e]"><span class="text-brand"><svg class="h-12 w-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><p><b class="block text-[30px] font-extrabold tracking-[-0.05em] text-brand">&gt; 120 000</b><span class="text-[14px] font-bold leading-[1.55]">документов оформлено в системе</span></p></div>
+          <div class="flex items-start gap-4 text-[#25314e]"><span class="text-brand"><svg class="h-12 w-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.2 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg></span><p><b class="block text-[30px] font-extrabold tracking-[-0.05em] text-brand">9 из 10</b><span class="text-[14px] font-bold leading-[1.55]">по внутреннему опросу говорят, что стало быстрее</span></p></div>
+          <div class="flex items-start gap-4 text-[#25314e]"><span class="text-brand"><svg class="h-12 w-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 5 6v6c0 4 2.8 7.4 7 9 4.2-1.6 7-5 7-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span><p><b class="block text-[30px] font-extrabold tracking-[-0.05em] text-brand">100%</b><span class="text-[14px] font-bold leading-[1.55]">юридическая сила документов</span></p></div>
+        </div>
+      </div>
+    </section>
+    <!-- screen-09:end -->
+
+    <!-- screen-10:start -->
+    <section id="prices" class="screen-section px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+      <div class="mx-auto max-w-[1440px]">
+        <div class="max-w-[760px]">
+          <h2 class="text-[38px] font-extrabold leading-[1.16] tracking-[-0.065em] text-black sm:text-[52px]">
+            Платите только <span class="text-brand">за документы,</span><br />которые используете
+          </h2>
+        </div>
+        <div class="mt-16 grid gap-7 lg:grid-cols-[1fr_1.15fr_1fr_1.25fr]">
+          <article class="price-card rounded-[24px] bg-white p-8">
+            <h3 class="text-[29px] font-extrabold tracking-[-0.05em] text-black">Старт</h3>
+            <p class="mt-4 text-[20px] font-bold text-[#58627d]">15 документов</p>
+            <div class="mt-8 text-[20px] font-bold text-[#4a566f] line-through">4 485 ₽</div>
+            <div class="mt-1 text-[36px] font-extrabold tracking-[-0.06em] text-brand">2 990 ₽</div>
+            <span class="mt-4 inline-flex rounded-lg bg-[#dfe7ff] px-3 py-1 text-[15px] font-extrabold text-brand">Экономия 33%</span>
+            <p class="mt-8 text-[16px] font-medium leading-[1.65] text-[#3f4d69]">Идеально для небольших проектов и разовых съёмок.</p>
+            <a href="#start" class="mt-12 flex h-14 items-center justify-center rounded-xl border border-brand text-[17px] font-extrabold text-brand">Выбрать тариф</a>
+          </article>
+          <article class="price-card price-card-popular relative rounded-[24px] bg-white p-8">
+            <div class="absolute -left-px -right-px -top-8 grid h-9 place-items-center rounded-t-[18px] bg-brand text-[15px] font-extrabold text-white">Самый популярный</div>
+            <h3 class="text-[29px] font-extrabold tracking-[-0.05em] text-black">Продакшн</h3>
+            <p class="mt-4 text-[20px] font-bold text-[#58627d]">40 документов</p>
+            <div class="mt-8 text-[20px] font-bold text-[#4a566f] line-through">11 960 ₽</div>
+            <div class="mt-1 text-[36px] font-extrabold tracking-[-0.06em] text-brand">6 990 ₽</div>
+            <span class="mt-4 inline-flex rounded-lg bg-[#dfe7ff] px-3 py-1 text-[15px] font-extrabold text-brand">Экономия 42%</span>
+            <p class="mt-8 text-[16px] font-medium leading-[1.65] text-[#3f4d69]">Оптимально для продакшн-команд и регулярных проектов.</p>
+            <a href="#start" class="mt-12 flex h-14 items-center justify-center rounded-xl bg-brand text-[17px] font-extrabold text-white shadow-button">Выбрать тариф</a>
+          </article>
+          <article class="price-card rounded-[24px] bg-white p-8">
+            <h3 class="text-[29px] font-extrabold tracking-[-0.05em] text-black">Кино</h3>
+            <p class="mt-4 text-[20px] font-bold text-[#58627d]">120 документов</p>
+            <div class="mt-8 text-[20px] font-bold text-[#4a566f] line-through">35 880 ₽</div>
+            <div class="mt-1 text-[36px] font-extrabold tracking-[-0.06em] text-brand">14 990 ₽</div>
+            <span class="mt-4 inline-flex rounded-lg bg-[#dfe7ff] px-3 py-1 text-[15px] font-extrabold text-brand">Экономия 58%</span>
+            <p class="mt-8 text-[16px] font-medium leading-[1.65] text-[#3f4d69]">Для киностудий и крупных производств.</p>
+            <a href="#start" class="mt-12 flex h-14 items-center justify-center rounded-xl border border-brand text-[17px] font-extrabold text-brand">Выбрать тариф</a>
+          </article>
+          <aside class="price-card rounded-[24px] bg-white p-8">
+            <h3 class="text-[22px] font-extrabold tracking-[-0.04em] text-black">Или покупайте поштучно</h3>
+            <div class="mt-9 flex items-center gap-6">
+              <span class="icon-box flex h-24 w-24 shrink-0 items-center justify-center rounded-full text-brand"><svg class="h-12 w-12" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3.5"><path d="M18 8h21l9 9v39H18z"/><path d="M39 8v11h11"/><path d="M25 31h16M25 41h12"/></svg></span>
+              <div><b class="block text-[38px] font-extrabold tracking-[-0.05em] text-black">299 ₽</b><span class="text-[18px] font-extrabold text-black">за документ</span></div>
+            </div>
+            <ul class="mt-9 grid gap-5 text-[16px] font-medium leading-[1.55] text-[#34415e]">
+              <li class="flex gap-3"><span class="text-brand">✓</span>Документ включает договор и приложение</li>
+              <li class="flex gap-3"><span class="text-brand">✓</span>Акты бесплатные и не тратят лимит</li>
+              <li class="flex gap-3"><span class="text-brand">✓</span>Неиспользованные документы остаются на счёте</li>
+              <li class="flex gap-3"><span class="text-brand">✓</span>Можно докупить документы по 299 ₽</li>
+            </ul>
+          </aside>
+        </div>
+        <div class="pricing-bonus mt-8 grid gap-5 rounded-[26px] bg-white p-6 sm:grid-cols-[88px_minmax(0,1fr)] lg:grid-cols-[96px_minmax(0,1fr)_auto] lg:items-center lg:p-7">
+          <div class="bonus-badge grid h-20 w-20 place-items-center rounded-3xl text-white sm:h-24 sm:w-24">
+            <svg class="h-10 w-10 sm:h-12 sm:w-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 8v5" />
+              <path d="M12 17h.01" />
+              <path d="M10.3 4.4 2.8 17.2A2 2 0 0 0 4.5 20h15a2 2 0 0 0 1.7-2.8L13.7 4.4a2 2 0 0 0-3.4 0Z" />
+            </svg>
+          </div>
+          <div>
+            <p class="text-[12px] font-extrabold uppercase tracking-[0.18em] text-brand/70">Бонус при регистрации</p>
+            <h3 class="mt-2 max-w-[820px] text-[24px] font-extrabold leading-[1.22] tracking-[-0.045em] text-black sm:text-[30px]">
+              Первые 6 документов бесплатно при регистрации для заведения первого проекта и подрядчиков в CinemaDoc.
+            </h3>
+          </div>
+          <a href="#start" class="inline-flex h-14 items-center justify-center rounded-xl bg-brand px-7 text-[16px] font-extrabold text-white shadow-button">Завести проект</a>
+        </div>
+        <div class="pricing-bonus pricing-bonus-secondary mt-5 grid gap-5 rounded-[26px] bg-white p-6 sm:grid-cols-[88px_minmax(0,1fr)] lg:grid-cols-[96px_minmax(0,1fr)_auto] lg:items-center lg:p-7">
+          <div class="bonus-badge bonus-badge-secondary grid h-20 w-20 place-items-center rounded-3xl text-white sm:h-24 sm:w-24">
+            <svg class="h-10 w-10 sm:h-12 sm:w-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="9" cy="8" r="3" />
+              <path d="M3 20c.8-3.3 2.8-5 6-5s5.2 1.7 6 5" />
+              <path d="M16 11a3 3 0 1 0 0-6" />
+              <path d="M17 15c2.5.2 4.1 1.9 4.8 5" />
+            </svg>
+          </div>
+          <div>
+            <p class="text-[12px] font-extrabold uppercase tracking-[0.18em] text-brand/70">Бесплатно для исполнителей</p>
+            <h3 class="mt-2 max-w-[820px] text-[24px] font-extrabold leading-[1.22] tracking-[-0.045em] text-black sm:text-[30px]">
+              Исполнители бесплатно пользуются платформой: получают ссылку, проверяют и подписывают документы без оплаты и отдельного тарифа.
+            </h3>
+          </div>
+          <a href="#readiness" class="inline-flex h-14 items-center justify-center rounded-xl border border-brand px-7 text-[16px] font-extrabold text-brand">Начать</a>
+        </div>
+      </div>
+    </section>
+    <!-- screen-10:end -->
+
+    <!-- screen-11:start -->
+    <section id="faq" class="screen-section bg-white px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+      <div class="mx-auto max-w-[1180px]">
+        <div class="mx-auto max-w-[820px] text-center">
+          <div class="text-[12px] font-extrabold uppercase tracking-[0.18em] text-brand/70">Юридические вопросы</div>
+          <h2 class="mt-4 text-[40px] font-extrabold leading-[1.1] tracking-[-0.068em] text-black sm:text-[56px]">Частые <span class="text-brand">вопросы</span></h2>
+        </div>
+
+        <div class="faq-list mx-auto mt-10 grid max-w-[920px] gap-4">
+          <article class="faq-item is-open rounded-2xl bg-white">
+            <button class="faq-toggle" type="button" aria-expanded="true">
+              <span>Имеют ли документы юридическую силу?</span>
+              <b>−</b>
+            </button>
+            <p class="faq-answer">Да. Документы формируются по требованиям законодательства РФ и подписываются электронной подписью. Для команды это заменяет бумажный обмен и сохраняет историю подписания в проекте.</p>
+          </article>
+          <article class="faq-item rounded-2xl bg-white">
+            <button class="faq-toggle" type="button" aria-expanded="false">
+              <span>Нужно ли подрядчикам подключаться к ЭДО?</span>
+              <b>+</b>
+            </button>
+            <p class="faq-answer">Нет. Подрядчик получает ссылку, проверяет документ и подписывает онлайн без отдельной настройки сложного ЭДО.</p>
+          </article>
+          <article class="faq-item rounded-2xl bg-white">
+            <button class="faq-toggle" type="button" aria-expanded="false">
+              <span>Как считаются документы в тарифе?</span>
+              <b>+</b>
+            </button>
+            <p class="faq-answer">Один оплачиваемый документ включает договор и приложение. Акты бесплатные и не расходуют лимит. Неиспользованные документы остаются на счёте.</p>
+          </article>
+          <article class="faq-item rounded-2xl bg-white">
+            <button class="faq-toggle" type="button" aria-expanded="false">
+              <span>Мои данные защищены?</span>
+              <b>+</b>
+            </button>
+            <p class="faq-answer">Да. Доступ к проекту ограничен, а документы и персональные данные хранятся в защищённой инфраструктуре.</p>
+          </article>
+          <article class="faq-item rounded-2xl bg-white">
+            <button class="faq-toggle" type="button" aria-expanded="false">
+              <span>Подходит ли CinemaDoc для кино и рекламных проектов?</span>
+              <b>+</b>
+            </button>
+            <p class="faq-answer">Да. Сервис рассчитан на видеопродакшены, рекламные съёмки, документальные проекты, постпродакшен и большие кинопроекты.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- screen-11:end -->
+
+    <!-- screen-12:start -->
+    <section id="readiness" class="screen-section px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+      <div class="mx-auto max-w-[1440px]">
+        <div class="mx-auto max-w-[940px] text-center">
+          <h2 class="text-[38px] font-extrabold leading-[1.12] tracking-[-0.065em] text-black sm:text-[52px] lg:text-[60px]">
+            Рассчитайте <span class="text-brand">сколько документов</span><br class="hidden lg:block" /> понадобится проекту
+          </h2>
+          <p class="mx-auto mt-5 max-w-[820px] text-[18px] font-medium leading-[1.65] text-muted">Укажите примерное количество подрядчиков — калькулятор подберёт объём документов и тариф по текущей ценовой политике.</p>
+        </div>
+
+        <div class="mt-10 grid gap-7 lg:grid-cols-[1fr_.9fr]">
+          <article class="readiness-card rounded-[26px] bg-white p-7">
+            <h3 class="text-[24px] font-extrabold tracking-[-0.04em] text-black">Сколько подрядчиков будет в проекте?</h3>
+            <p class="mt-3 text-[16px] font-medium leading-[1.65] text-[#52607f]">Мы считаем один оплачиваемый документ на подрядчика: договор с приложением. Акты не расходуют лимит.</p>
+            <div class="mt-7 grid gap-3 sm:grid-cols-2">
+              <button type="button" class="calc-option h-20 rounded-2xl border border-line bg-white px-5 text-left text-[17px] font-bold text-[#56617c]" data-contractors="5">1–5 подрядчиков<span class="block pt-1 text-[13px] font-semibold text-[#7a86a1]">небольшая съёмка</span></button>
+              <button type="button" class="calc-option h-20 rounded-2xl border border-line bg-white px-5 text-left text-[17px] font-bold text-[#56617c]" data-contractors="15">6–15 подрядчиков<span class="block pt-1 text-[13px] font-semibold text-[#7a86a1]">короткий продакшн</span></button>
+              <button type="button" class="calc-option is-selected h-20 rounded-2xl border border-brand bg-white px-5 text-left text-[17px] font-bold text-brand shadow-[0_10px_22px_rgba(45,90,253,.07)]" data-contractors="30">16–30 подрядчиков<span class="block pt-1 text-[13px] font-semibold text-[#7a86a1]">регулярный проект</span></button>
+              <button type="button" class="calc-option h-20 rounded-2xl border border-line bg-white px-5 text-left text-[17px] font-bold text-[#56617c]" data-contractors="80">30+ подрядчиков<span class="block pt-1 text-[13px] font-semibold text-[#7a86a1]">большая команда</span></button>
+            </div>
+            <div class="custom-calc mt-7 rounded-2xl p-5">
+              <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <p class="text-[12px] font-extrabold uppercase tracking-[0.16em] text-brand/70">Точный расчёт</p>
+                  <h4 class="mt-2 text-[22px] font-extrabold tracking-[-0.04em] text-black">Задайте своё число подрядчиков</h4>
+                </div>
+                <output id="contractor-count" class="grid h-16 min-w-[6rem] place-items-center rounded-2xl bg-brand px-5 text-[30px] font-extrabold tracking-[-0.06em] text-white">30</output>
+              </div>
+              <input id="contractor-slider" class="calc-range mt-6 w-full" type="range" min="1" max="300" step="1" value="30" aria-label="Количество подрядчиков" />
+              <div class="mt-3 flex justify-between text-[12px] font-extrabold uppercase tracking-[0.12em] text-[#8a96ad]">
+                <span>1</span><span>120</span><span>300+</span>
+              </div>
+              <div class="mt-5 grid gap-4 sm:grid-cols-[210px_minmax(0,1fr)] sm:items-stretch">
+                <label class="grid gap-2 text-[14px] font-extrabold text-[#33415f]">
+                  Точное число
+                  <input id="contractor-input" class="contractor-input h-14 rounded-xl px-4 text-[20px] font-extrabold text-black outline-none" type="number" min="1" max="500" value="30" />
+                </label>
+                <div class="rounded-2xl bg-white/75 p-4 text-[14px] font-semibold leading-[1.55] text-[#52607f]">
+                  Если документов выходит больше одного тарифа, калькулятор собирает выгодную комбинацию пакетов: например, «Кино + Старт» или два пакета «Продакшн», а не докидывает каждый договор поштучно.
+                </div>
+              </div>
+            </div>
+            <div class="mt-7 rounded-2xl bg-blue-50/70 p-5 text-[15px] font-semibold leading-[1.65] text-[#40506f]">
+              Первые 6 документов бесплатно при регистрации для заведения первого проекта и подрядчиков в CinemaDoc. Если нужен разовый документ, можно купить поштучно за 299 ₽.
+            </div>
+          </article>
+
+          <aside class="readiness-card rounded-[26px] bg-white p-7">
+            <h3 class="text-[26px] font-extrabold tracking-[-0.04em] text-brand">Расчёт проекта</h3>
+            <div class="mt-7 grid gap-4">
+              <div class="rounded-2xl bg-[#f5f8ff] p-5"><span class="text-[13px] font-extrabold uppercase tracking-[.14em] text-[#7a86a1]">Подрядчики</span><b id="calc-contractors" class="mt-2 block text-[34px] font-extrabold tracking-[-0.06em] text-black">30</b></div>
+              <div class="rounded-2xl bg-[#f5f8ff] p-5"><span class="text-[13px] font-extrabold uppercase tracking-[.14em] text-[#7a86a1]">Нужно документов</span><b id="calc-docs" class="mt-2 block text-[34px] font-extrabold tracking-[-0.06em] text-black">30</b></div>
+              <div class="rounded-2xl bg-[#f5f8ff] p-5"><span class="text-[13px] font-extrabold uppercase tracking-[.14em] text-[#7a86a1]">В пакетах</span><b id="calc-package-docs" class="mt-2 block text-[34px] font-extrabold tracking-[-0.06em] text-black">30</b></div>
+            </div>
+            <div class="mt-8 rounded-2xl border border-brand px-6 py-5">
+              <p class="text-[17px] font-extrabold text-brand">Выгодная комбинация</p>
+              <div class="mt-2 flex items-end justify-between gap-4">
+                <div>
+                  <div id="calc-plan" class="text-[25px] font-extrabold tracking-[-0.04em] text-black">2 × Старт</div>
+                  <p id="calc-price" class="mt-1 text-[18px] font-extrabold text-brand">5 980 ₽</p>
+                </div>
+                <a class="text-[17px] font-extrabold text-brand" href="#prices">Подробнее →</a>
+              </div>
+            </div>
+            <p id="calc-note" class="mt-5 text-[15px] font-semibold leading-[1.65] text-[#52607f]">Пакеты закрывают проект ровно на 30 документов без переплаты за лишний объём.</p>
+            <div class="mt-5 rounded-2xl bg-[#edf3ff] p-5 text-[15px] font-bold text-[#26344f]">Экономия на пакетах относительно поштучной покупки такого объёма: <span id="calc-saving" class="text-brand">≈ 2 990 ₽</span></div>
+            <a href="#start" class="mt-5 flex h-[60px] items-center justify-center rounded-2xl bg-brand text-[18px] font-extrabold text-white shadow-button">Получить расчёт</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+    <!-- screen-12:end -->
+
+    <!-- screen-13:start -->
+    <section id="start" class="screen-section px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+      <div class="contact-panel mx-auto grid max-w-[1240px] gap-10 rounded-[34px] bg-white p-6 sm:p-8 lg:grid-cols-[minmax(0,1fr)_460px] lg:p-10">
+        <div class="flex flex-col">
+          <div class="text-[12px] font-extrabold uppercase tracking-[0.18em] text-brand/70">Старт работы</div>
+          <h2 class="mt-4 text-[40px] font-extrabold leading-[1.14] tracking-[-0.068em] text-black sm:text-[54px]">
+            Запустите документооборот<br class="hidden sm:block" /> <span class="text-brand">без бумажной рутины</span>
+          </h2>
+          <p class="mt-7 max-w-[660px] text-[18px] font-medium leading-[1.75] text-[#33415f]">Оставьте заявку — покажем сервис на вашем типе проекта, рассчитаем объём документов и подскажем подходящий тариф.</p>
+
+          <div class="mt-10 grid gap-4 sm:grid-cols-3">
+            <article class="contact-feature"><span>15 мин</span><b>демо</b><p>Покажем на реальном сценарии продакшена</p></article>
+            <article class="contact-feature"><span>1 день</span><b>старт</b><p>Поможем быстро начать без сложных настроек</p></article>
+            <article class="contact-feature"><span>152-ФЗ</span><b>защита</b><p>Данные и документы остаются под контролем</p></article>
+          </div>
+
+          <div class="mt-auto flex flex-wrap gap-6 pt-10 text-[15px] font-semibold text-[#33415f]">
+            <a class="flex items-center gap-3 text-brand" href="mailto:hello@cinemadoc.ru"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg><span class="text-[#33415f]">hello@cinemadoc.ru</span></a>
+            <a class="flex items-center gap-3 text-brand" href="tel:+74957443554"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2.1Z"/></svg><span class="text-[#33415f]">+7 (495) 744-35-54</span></a>
+            <span>Пн–Пт с 10:00 до 19:00 (МСК)</span>
+          </div>
+        </div>
+
+        <form class="contact-form rounded-[26px] bg-white p-7">
+          <label class="mb-5 block text-[16px] font-extrabold text-black">Имя <span class="text-[#f25542]">*</span><input class="contact-field mt-2 h-14 w-full rounded-xl px-4 text-[16px] font-medium text-[#273451] outline-none" name="name" required type="text" placeholder="Введите ваше имя" /></label>
+          <label class="mb-5 block text-[16px] font-extrabold text-black">Телефон <span class="text-[#f25542]">*</span><input class="contact-field mt-2 h-14 w-full rounded-xl px-4 text-[16px] font-medium text-[#273451] outline-none" name="phone" required type="tel" placeholder="+7 (___) ___-__-__" /></label>
+          <label class="mb-5 block text-[16px] font-extrabold text-black">Email <span class="text-[#f25542]">*</span><input class="contact-field mt-2 h-14 w-full rounded-xl px-4 text-[16px] font-medium text-[#273451] outline-none" name="email" required type="email" placeholder="example@company.ru" /></label>
+          <label class="mb-6 block text-[16px] font-extrabold text-black">Telegram <span class="text-[#f25542]">*</span><input class="contact-field mt-2 h-14 w-full rounded-xl px-4 text-[16px] font-medium text-[#273451] outline-none" name="telegram" required type="text" placeholder="@username" /></label>
+          <button class="h-[58px] w-full rounded-xl bg-brand text-[18px] font-extrabold text-white shadow-button transition hover:-translate-y-0.5 hover:bg-[#244ff0]" type="submit">Оставить заявку</button>
+          <p class="mt-6 text-center text-[13px] font-medium leading-[1.55] text-[#56617c]">Нажимая «Оставить заявку», вы соглашаетесь с <a class="font-extrabold text-brand" href="#footer">политикой конфиденциальности</a></p>
+        </form>
+      </div>
+    </section>
+    <!-- screen-13:end -->
+
+  </main>
+
+  <footer id="footer" class="border-t border-line bg-white px-6 py-10 sm:px-8 lg:px-12">
+    <div class="mx-auto grid max-w-[1440px] gap-8 md:grid-cols-[1fr_auto] md:items-end">
+      <div>
+        <a href="#" class="text-[30px] font-extrabold tracking-[-0.075em] text-black" aria-label="CinemaDoc">Cinema<span class="text-brand">Doc</span></a>
+        <p class="mt-4 max-w-[560px] text-[14px] font-medium leading-[1.65] text-[#64708A]">Документы, подрядчики и статусы подписания для съёмочных проектов в одном кабинете.</p>
+      </div>
+      <nav class="flex flex-wrap gap-5 text-[14px] font-bold text-[#33415f]">
+        <a class="hover:text-brand" href="#">Главная</a>
+        <a class="hover:text-brand" href="#prices">Тарифы</a>
+        <a class="hover:text-brand" href="#about">Отзывы</a>
+        <a class="hover:text-brand" href="#start">Оставить заявку</a>
+        <a class="hover:text-brand" href="blog.html">Блог</a>
+      </nav>
+      <div class="border-t border-line pt-6 text-[13px] font-medium text-[#7a86a1] md:col-span-2">
+        © 2026 CinemaDoc. Информация на странице носит справочный характер и не является публичной офертой.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const moneyFormat = new Intl.NumberFormat('ru-RU');
+    const packagePlans = [
+      { name: 'Старт', docs: 15, price: 2990 },
+      { name: 'Продакшн', docs: 40, price: 6990 },
+      { name: 'Кино', docs: 120, price: 14990 },
+    ];
+    const [startPlan, productionPlan, kinoPlan] = packagePlans;
+
+    const plural = (value, one, few, many) => {
+      const mod10 = value % 10;
+      const mod100 = value % 100;
+      if (mod10 === 1 && mod100 !== 11) return one;
+      if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return few;
+      return many;
+    };
+
+    const formatMoney = (value) => `${moneyFormat.format(value)} ₽`;
+
+    const getBestPackageCombo = (requiredDocs) => {
+      let best = null;
+
+      for (let kino = 0; kino <= Math.ceil(requiredDocs / kinoPlan.docs) + 2; kino += 1) {
+        for (let production = 0; production <= Math.ceil(requiredDocs / productionPlan.docs) + 3; production += 1) {
+          for (let start = 0; start <= Math.ceil(requiredDocs / startPlan.docs) + 4; start += 1) {
+            const docs = kino * kinoPlan.docs + production * productionPlan.docs + start * startPlan.docs;
+            if (docs < requiredDocs || docs === 0) continue;
+
+            const price = kino * kinoPlan.price + production * productionPlan.price + start * startPlan.price;
+            const packs = kino + production + start;
+            const candidate = { docs, price, packs, counts: { kino, production, start } };
+
+            if (!best || price < best.price || (price === best.price && docs < best.docs) || (price === best.price && docs === best.docs && packs < best.packs)) {
+              best = candidate;
+            }
+          }
+        }
+      }
+
+      return best;
+    };
+
+    const describeCombo = (combo) => {
+      const parts = [];
+      if (combo.counts.kino) parts.push(combo.counts.kino > 1 ? `${combo.counts.kino} × ${kinoPlan.name}` : kinoPlan.name);
+      if (combo.counts.production) parts.push(combo.counts.production > 1 ? `${combo.counts.production} × ${productionPlan.name}` : productionPlan.name);
+      if (combo.counts.start) parts.push(combo.counts.start > 1 ? `${combo.counts.start} × ${startPlan.name}` : startPlan.name);
+      return parts.join(' + ');
+    };
+
+    const calcButtons = document.querySelectorAll('.calc-option');
+    const contractorSlider = document.getElementById('contractor-slider');
+    const contractorInput = document.getElementById('contractor-input');
+    const contractorCount = document.getElementById('contractor-count');
+
+    const setPresetState = (value) => {
+      calcButtons.forEach((item) => {
+        const target = Number(item.dataset.contractors);
+        const isSelected = (value <= 5 && target === 5) || (value > 5 && value <= 15 && target === 15) || (value > 15 && value <= 30 && target === 30) || (value > 30 && target === 80);
+
+        item.classList.toggle('is-selected', isSelected);
+        item.classList.toggle('border-brand', isSelected);
+        item.classList.toggle('text-brand', isSelected);
+        item.classList.toggle('shadow-[0_10px_22px_rgba(45,90,253,.07)]', isSelected);
+        item.classList.toggle('border-line', !isSelected);
+        item.classList.toggle('text-[#56617c]', !isSelected);
+      });
+    };
+
+    const updateCalculator = (rawValue) => {
+      const value = Math.max(1, Math.min(500, Number(rawValue) || 1));
+      const combo = getBestPackageCombo(value);
+      const extraDocs = combo.docs - value;
+      const packageSaving = combo.docs * 299 - combo.price;
+
+      contractorCount.textContent = value;
+      contractorInput.value = value;
+      contractorSlider.value = Math.min(value, Number(contractorSlider.max));
+      setPresetState(value);
+
+      document.getElementById('calc-contractors').textContent = value;
+      document.getElementById('calc-docs').textContent = value;
+      document.getElementById('calc-package-docs').textContent = combo.docs;
+      document.getElementById('calc-plan').textContent = describeCombo(combo);
+      document.getElementById('calc-price').textContent = formatMoney(combo.price);
+      document.getElementById('calc-saving').textContent = `≈ ${formatMoney(packageSaving)}`;
+      document.getElementById('calc-note').textContent = extraDocs > 0
+        ? `Пакеты закрывают ${combo.docs} ${plural(combo.docs, 'документ', 'документа', 'документов')}. Запас ${extraDocs} ${plural(extraDocs, 'документ', 'документа', 'документов')} можно использовать на дополнительные договоры или новых подрядчиков.`
+        : `Пакеты закрывают проект ровно на ${combo.docs} ${plural(combo.docs, 'документ', 'документа', 'документов')} без переплаты за лишний объём.`;
+    };
+
+    calcButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        updateCalculator(button.dataset.contractors);
+      });
+    });
+
+    contractorSlider?.addEventListener('input', (event) => updateCalculator(event.target.value));
+    contractorInput?.addEventListener('input', (event) => updateCalculator(event.target.value));
+    updateCalculator(contractorInput?.value || 30);
+
+    document.querySelectorAll('.faq-toggle').forEach((button) => {
+      button.addEventListener('click', () => {
+        const item = button.closest('.faq-item');
+        const isOpen = item.classList.toggle('is-open');
+        button.setAttribute('aria-expanded', String(isOpen));
+        button.querySelector('b').textContent = isOpen ? '−' : '+';
+      });
+    });
+
+    document.querySelector('.contact-form')?.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const button = event.currentTarget.querySelector('button[type="submit"]');
+      button.textContent = 'Заявка готова к отправке';
+    });
+  </script>
+</body>
+</html>

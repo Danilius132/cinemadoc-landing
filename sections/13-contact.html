@@ -1,0 +1,39 @@
+<!--
+  Source: index.html (screen-13)
+  Tailwind CDN is configured in the shared index.html.
+  Screen styles:
+- ../styles/base.css
+- ../styles/screen-13-contact.css
+-->
+<section id="start" class="screen-section px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+      <div class="contact-panel mx-auto grid max-w-[1240px] gap-10 rounded-[34px] bg-white p-6 sm:p-8 lg:grid-cols-[minmax(0,1fr)_460px] lg:p-10">
+        <div class="flex flex-col">
+          <div class="text-[12px] font-extrabold uppercase tracking-[0.18em] text-brand/70">Старт работы</div>
+          <h2 class="mt-4 text-[40px] font-extrabold leading-[1.14] tracking-[-0.068em] text-black sm:text-[54px]">
+            Запустите документооборот<br class="hidden sm:block" /> <span class="text-brand">без бумажной рутины</span>
+          </h2>
+          <p class="mt-7 max-w-[660px] text-[18px] font-medium leading-[1.75] text-[#33415f]">Оставьте заявку — покажем сервис на вашем типе проекта, рассчитаем объём документов и подскажем подходящий тариф.</p>
+
+          <div class="mt-10 grid gap-4 sm:grid-cols-3">
+            <article class="contact-feature"><span>15 мин</span><b>демо</b><p>Покажем на реальном сценарии продакшена</p></article>
+            <article class="contact-feature"><span>1 день</span><b>старт</b><p>Поможем быстро начать без сложных настроек</p></article>
+            <article class="contact-feature"><span>152-ФЗ</span><b>защита</b><p>Данные и документы остаются под контролем</p></article>
+          </div>
+
+          <div class="mt-auto flex flex-wrap gap-6 pt-10 text-[15px] font-semibold text-[#33415f]">
+            <a class="flex items-center gap-3 text-brand" href="mailto:hello@cinemadoc.ru"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg><span class="text-[#33415f]">hello@cinemadoc.ru</span></a>
+            <a class="flex items-center gap-3 text-brand" href="tel:+74957443554"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2.1Z"/></svg><span class="text-[#33415f]">+7 (495) 744-35-54</span></a>
+            <span>Пн–Пт с 10:00 до 19:00 (МСК)</span>
+          </div>
+        </div>
+
+        <form class="contact-form rounded-[26px] bg-white p-7">
+          <label class="mb-5 block text-[16px] font-extrabold text-black">Имя <span class="text-[#f25542]">*</span><input class="contact-field mt-2 h-14 w-full rounded-xl px-4 text-[16px] font-medium text-[#273451] outline-none" name="name" required type="text" placeholder="Введите ваше имя" /></label>
+          <label class="mb-5 block text-[16px] font-extrabold text-black">Телефон <span class="text-[#f25542]">*</span><input class="contact-field mt-2 h-14 w-full rounded-xl px-4 text-[16px] font-medium text-[#273451] outline-none" name="phone" required type="tel" placeholder="+7 (___) ___-__-__" /></label>
+          <label class="mb-5 block text-[16px] font-extrabold text-black">Email <span class="text-[#f25542]">*</span><input class="contact-field mt-2 h-14 w-full rounded-xl px-4 text-[16px] font-medium text-[#273451] outline-none" name="email" required type="email" placeholder="example@company.ru" /></label>
+          <label class="mb-6 block text-[16px] font-extrabold text-black">Telegram <span class="text-[#f25542]">*</span><input class="contact-field mt-2 h-14 w-full rounded-xl px-4 text-[16px] font-medium text-[#273451] outline-none" name="telegram" required type="text" placeholder="@username" /></label>
+          <button class="h-[58px] w-full rounded-xl bg-brand text-[18px] font-extrabold text-white shadow-button transition hover:-translate-y-0.5 hover:bg-[#244ff0]" type="submit">Оставить заявку</button>
+          <p class="mt-6 text-center text-[13px] font-medium leading-[1.55] text-[#56617c]">Нажимая «Оставить заявку», вы соглашаетесь с <a class="font-extrabold text-brand" href="#footer">политикой конфиденциальности</a></p>
+        </form>
+      </div>
+    </section>

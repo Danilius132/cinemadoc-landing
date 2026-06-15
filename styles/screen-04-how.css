@@ -1,0 +1,121 @@
+#how {
+  background:
+    radial-gradient(circle at 12% 20%, rgba(21, 82, 255, .07), transparent 28%),
+    linear-gradient(180deg, #fff 0%, #f7faff 100%);
+}
+
+.process-chip {
+  border: 1px solid rgba(21, 82, 255, .14);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .76);
+  color: #33415f;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.35;
+  padding: 14px 16px;
+}
+
+.process-timeline {
+  position: relative;
+  display: grid;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.process-timeline::before {
+  position: absolute;
+  top: 38px;
+  bottom: 38px;
+  left: 32px;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(21, 82, 255, .1), rgba(21, 82, 255, .55), rgba(21, 82, 255, .1));
+  content: "";
+}
+
+.process-step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 66px minmax(0, 1fr);
+  gap: 20px;
+}
+
+.process-number {
+  z-index: 1;
+  display: grid;
+  width: 66px;
+  height: 66px;
+  place-items: center;
+  border-radius: 22px;
+  background: #1552ff;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  box-shadow: 0 16px 34px rgba(21, 82, 255, .22);
+}
+
+.process-body {
+  display: grid;
+  grid-template-columns: 74px minmax(0, 1fr);
+  gap: 22px;
+  border: 1px solid rgba(224, 231, 244, .95);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, .9);
+  box-shadow: 0 18px 48px rgba(37, 57, 104, .07);
+  padding: 28px;
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+.process-body:hover {
+  transform: translateY(-4px);
+  border-color: rgba(21, 82, 255, .24);
+  box-shadow: 0 26px 64px rgba(37, 57, 104, .11);
+}
+
+.process-icon {
+  display: grid;
+  width: 74px;
+  height: 74px;
+  place-items: center;
+  border-radius: 22px;
+  background: rgba(21, 82, 255, .08);
+  color: #1552ff;
+}
+
+.process-icon svg {
+  width: 42px;
+  height: 42px;
+}
+
+.process-body h3 {
+  margin: 0;
+  color: #05070c;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -.04em;
+  line-height: 1.2;
+}
+
+.process-body p {
+  margin: 12px 0 0;
+  color: #52607f;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.68;
+}
+
+@media (max-width: 640px) {
+  .process-step {
+    grid-template-columns: 1fr;
+  }
+
+  .process-timeline::before,
+  .process-number {
+    display: none;
+  }
+
+  .process-body {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: #0E1628;
+  background:
+    radial-gradient(circle at 4% 8%, rgba(45, 90, 253, .07), transparent 26%),
+    radial-gradient(circle at 92% 22%, rgba(45, 90, 253, .06), transparent 24%),
+    linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
+}
+
+.screen-section { scroll-margin-top: 96px; }
+
+.text-balance { text-wrap: balance; }

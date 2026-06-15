@@ -1,0 +1,30 @@
+.hero-metric {
+  background:
+    radial-gradient(circle at 84% 18%, rgba(45, 90, 253, .16), transparent 34%),
+    linear-gradient(145deg, rgba(255,255,255,.99), rgba(244,248,255,.98));
+  border: 1px solid rgba(45, 90, 253, .14);
+  box-shadow: 0 26px 68px rgba(45, 90, 253, .12), 0 10px 24px rgba(24, 43, 86, .07);
+}
+
+.metric-glow {
+  background: rgba(45, 90, 253, .12);
+  filter: blur(44px);
+}
+
+.benefit-card {
+  background: linear-gradient(180deg, rgba(255,255,255,.97), rgba(250,252,255,.95));
+  border: 1px solid rgba(181, 195, 223, .45);
+  box-shadow: 0 16px 38px rgba(37, 57, 104, .055);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(45, 90, 253, .24);
+  box-shadow: 0 22px 48px rgba(37, 57, 104, .085);
+}
+
+.icon-box {
+  background: rgba(45, 90, 253, .08);
+  border: 1px solid rgba(45, 90, 253, .11);
+}

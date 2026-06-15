@@ -1,0 +1,77 @@
+<!--
+  Source: index.html (screen-12)
+  Tailwind CDN is configured in the shared index.html.
+  Screen styles:
+- ../styles/base.css
+- ../styles/screen-12-readiness.css
+-->
+<section id="readiness" class="screen-section px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+      <div class="mx-auto max-w-[1440px]">
+        <div class="mx-auto max-w-[940px] text-center">
+          <h2 class="text-[38px] font-extrabold leading-[1.12] tracking-[-0.065em] text-black sm:text-[52px] lg:text-[60px]">
+            Рассчитайте <span class="text-brand">сколько документов</span><br class="hidden lg:block" /> понадобится проекту
+          </h2>
+          <p class="mx-auto mt-5 max-w-[820px] text-[18px] font-medium leading-[1.65] text-muted">Укажите примерное количество подрядчиков — калькулятор подберёт объём документов и тариф по текущей ценовой политике.</p>
+        </div>
+
+        <div class="mt-10 grid gap-7 lg:grid-cols-[1fr_.9fr]">
+          <article class="readiness-card rounded-[26px] bg-white p-7">
+            <h3 class="text-[24px] font-extrabold tracking-[-0.04em] text-black">Сколько подрядчиков будет в проекте?</h3>
+            <p class="mt-3 text-[16px] font-medium leading-[1.65] text-[#52607f]">Мы считаем один оплачиваемый документ на подрядчика: договор с приложением. Акты не расходуют лимит.</p>
+            <div class="mt-7 grid gap-3 sm:grid-cols-2">
+              <button type="button" class="calc-option h-20 rounded-2xl border border-line bg-white px-5 text-left text-[17px] font-bold text-[#56617c]" data-contractors="5">1–5 подрядчиков<span class="block pt-1 text-[13px] font-semibold text-[#7a86a1]">небольшая съёмка</span></button>
+              <button type="button" class="calc-option h-20 rounded-2xl border border-line bg-white px-5 text-left text-[17px] font-bold text-[#56617c]" data-contractors="15">6–15 подрядчиков<span class="block pt-1 text-[13px] font-semibold text-[#7a86a1]">короткий продакшн</span></button>
+              <button type="button" class="calc-option is-selected h-20 rounded-2xl border border-brand bg-white px-5 text-left text-[17px] font-bold text-brand shadow-[0_10px_22px_rgba(45,90,253,.07)]" data-contractors="30">16–30 подрядчиков<span class="block pt-1 text-[13px] font-semibold text-[#7a86a1]">регулярный проект</span></button>
+              <button type="button" class="calc-option h-20 rounded-2xl border border-line bg-white px-5 text-left text-[17px] font-bold text-[#56617c]" data-contractors="80">30+ подрядчиков<span class="block pt-1 text-[13px] font-semibold text-[#7a86a1]">большая команда</span></button>
+            </div>
+            <div class="custom-calc mt-7 rounded-2xl p-5">
+              <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <p class="text-[12px] font-extrabold uppercase tracking-[0.16em] text-brand/70">Точный расчёт</p>
+                  <h4 class="mt-2 text-[22px] font-extrabold tracking-[-0.04em] text-black">Задайте своё число подрядчиков</h4>
+                </div>
+                <output id="contractor-count" class="grid h-16 min-w-[6rem] place-items-center rounded-2xl bg-brand px-5 text-[30px] font-extrabold tracking-[-0.06em] text-white">30</output>
+              </div>
+              <input id="contractor-slider" class="calc-range mt-6 w-full" type="range" min="1" max="300" step="1" value="30" aria-label="Количество подрядчиков" />
+              <div class="mt-3 flex justify-between text-[12px] font-extrabold uppercase tracking-[0.12em] text-[#8a96ad]">
+                <span>1</span><span>120</span><span>300+</span>
+              </div>
+              <div class="mt-5 grid gap-4 sm:grid-cols-[210px_minmax(0,1fr)] sm:items-stretch">
+                <label class="grid gap-2 text-[14px] font-extrabold text-[#33415f]">
+                  Точное число
+                  <input id="contractor-input" class="contractor-input h-14 rounded-xl px-4 text-[20px] font-extrabold text-black outline-none" type="number" min="1" max="500" value="30" />
+                </label>
+                <div class="rounded-2xl bg-white/75 p-4 text-[14px] font-semibold leading-[1.55] text-[#52607f]">
+                  Если документов выходит больше одного тарифа, калькулятор собирает выгодную комбинацию пакетов: например, «Кино + Старт» или два пакета «Продакшн», а не докидывает каждый договор поштучно.
+                </div>
+              </div>
+            </div>
+            <div class="mt-7 rounded-2xl bg-blue-50/70 p-5 text-[15px] font-semibold leading-[1.65] text-[#40506f]">
+              Первые 6 документов бесплатно при регистрации для заведения первого проекта и подрядчиков в CinemaDoc. Если нужен разовый документ, можно купить поштучно за 299 ₽.
+            </div>
+          </article>
+
+          <aside class="readiness-card rounded-[26px] bg-white p-7">
+            <h3 class="text-[26px] font-extrabold tracking-[-0.04em] text-brand">Расчёт проекта</h3>
+            <div class="mt-7 grid gap-4">
+              <div class="rounded-2xl bg-[#f5f8ff] p-5"><span class="text-[13px] font-extrabold uppercase tracking-[.14em] text-[#7a86a1]">Подрядчики</span><b id="calc-contractors" class="mt-2 block text-[34px] font-extrabold tracking-[-0.06em] text-black">30</b></div>
+              <div class="rounded-2xl bg-[#f5f8ff] p-5"><span class="text-[13px] font-extrabold uppercase tracking-[.14em] text-[#7a86a1]">Нужно документов</span><b id="calc-docs" class="mt-2 block text-[34px] font-extrabold tracking-[-0.06em] text-black">30</b></div>
+              <div class="rounded-2xl bg-[#f5f8ff] p-5"><span class="text-[13px] font-extrabold uppercase tracking-[.14em] text-[#7a86a1]">В пакетах</span><b id="calc-package-docs" class="mt-2 block text-[34px] font-extrabold tracking-[-0.06em] text-black">30</b></div>
+            </div>
+            <div class="mt-8 rounded-2xl border border-brand px-6 py-5">
+              <p class="text-[17px] font-extrabold text-brand">Выгодная комбинация</p>
+              <div class="mt-2 flex items-end justify-between gap-4">
+                <div>
+                  <div id="calc-plan" class="text-[25px] font-extrabold tracking-[-0.04em] text-black">2 × Старт</div>
+                  <p id="calc-price" class="mt-1 text-[18px] font-extrabold text-brand">5 980 ₽</p>
+                </div>
+                <a class="text-[17px] font-extrabold text-brand" href="#prices">Подробнее →</a>
+              </div>
+            </div>
+            <p id="calc-note" class="mt-5 text-[15px] font-semibold leading-[1.65] text-[#52607f]">Пакеты закрывают проект ровно на 30 документов без переплаты за лишний объём.</p>
+            <div class="mt-5 rounded-2xl bg-[#edf3ff] p-5 text-[15px] font-bold text-[#26344f]">Экономия на пакетах относительно поштучной покупки такого объёма: <span id="calc-saving" class="text-brand">≈ 2 990 ₽</span></div>
+            <a href="#start" class="mt-5 flex h-[60px] items-center justify-center rounded-2xl bg-brand text-[18px] font-extrabold text-white shadow-button">Получить расчёт</a>
+          </aside>
+        </div>
+      </div>
+    </section>

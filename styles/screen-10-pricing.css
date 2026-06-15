@@ -1,0 +1,73 @@
+.price-card {
+  border: 1px solid rgba(224, 231, 244, .95);
+  box-shadow: 0 18px 44px rgba(37, 57, 104, .07);
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(21, 82, 255, .24);
+  box-shadow: 0 28px 68px rgba(37, 57, 104, .12);
+}
+
+.price-card-popular {
+  border-color: rgba(21, 82, 255, .85);
+  box-shadow: 0 22px 52px rgba(21, 82, 255, .12);
+}
+
+.pricing-bonus {
+  border: 1px solid rgba(21, 82, 255, .24);
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(135deg, rgba(21, 82, 255, .42), rgba(121, 157, 255, .12)) border-box;
+  box-shadow: 0 22px 58px rgba(21, 82, 255, .11);
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+.pricing-bonus:hover {
+  transform: translateY(-4px);
+  border-color: rgba(21, 82, 255, .42);
+  box-shadow: 0 30px 74px rgba(21, 82, 255, .16);
+}
+
+.bonus-badge {
+  background:
+    radial-gradient(circle at 30% 24%, rgba(255, 255, 255, .32), transparent 30%),
+    linear-gradient(135deg, #1552ff, #5d8dff);
+  box-shadow: 0 18px 38px rgba(21, 82, 255, .24);
+}
+
+.pricing-bonus-secondary {
+  border-color: rgba(36, 176, 119, .24);
+}
+
+.bonus-badge-secondary {
+  background:
+    radial-gradient(circle at 30% 24%, rgba(255, 255, 255, .34), transparent 30%),
+    linear-gradient(135deg, #13a66f, #55cfa0);
+  box-shadow: 0 18px 38px rgba(19, 166, 111, .22);
+}
+
+#prices {
+  background: linear-gradient(180deg, #f8fbff 0%, #fff 100%);
+}
+
+#prices > div > div:first-child {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#prices > div > div:first-child p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#prices a {
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+#prices a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(21, 82, 255, .14);
+}

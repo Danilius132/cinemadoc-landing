@@ -1,0 +1,58 @@
+#start {
+  background:
+    radial-gradient(circle at 10% 28%, rgba(21, 82, 255, .06), transparent 28%),
+    radial-gradient(circle at 92% 42%, rgba(21, 82, 255, .08), transparent 24%),
+    linear-gradient(180deg, #fff 0%, #f7faff 100%);
+}
+
+.contact-panel {
+  border: 1px solid rgba(224, 231, 244, .92);
+  box-shadow: 0 28px 76px rgba(37, 57, 104, .10);
+}
+
+.contact-form {
+  border: 1px solid rgba(21, 82, 255, .13);
+  box-shadow: 0 22px 58px rgba(37, 57, 104, .085);
+}
+
+.contact-feature {
+  border: 1px solid rgba(224, 231, 244, .92);
+  border-radius: 20px;
+  background: #fff;
+  padding: 18px;
+  box-shadow: 0 12px 28px rgba(37, 57, 104, .055);
+}
+
+.contact-feature span {
+  display: block;
+  color: #1552ff;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -.05em;
+}
+
+.contact-feature b {
+  display: block;
+  margin-top: 4px;
+  color: #05070c;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.contact-feature p {
+  margin: 10px 0 0;
+  color: #52607f;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.contact-field {
+  border: 1px solid #d6dfef;
+  transition: border-color .18s ease, box-shadow .18s ease;
+}
+
+.contact-field:focus {
+  border-color: #1552ff;
+  box-shadow: 0 0 0 4px rgba(21, 82, 255, .09);
+}
