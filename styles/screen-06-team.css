@@ -46,6 +46,7 @@
 }
 
 .team-photo-frame {
+  position: relative;
   overflow: hidden;
   min-height: 100%;
   aspect-ratio: 4 / 5;
@@ -61,10 +62,97 @@
   min-height: 620px;
   object-fit: cover;
   object-position: center top;
+  transition: opacity .22s ease, transform .22s ease;
+}
+
+.team-photo-frame img.is-changing {
+  opacity: .72;
+  transform: scale(1.015);
+}
+
+.team-gallery {
+  display: grid;
+  gap: 16px;
+  height: 100%;
+}
+
+.team-gallery-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, .72);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .92);
+  color: #1552ff;
+  box-shadow: 0 16px 32px rgba(14, 22, 40, .14);
+  transform: translateY(-50%);
+  transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+}
+
+.team-gallery-arrow:hover {
+  background: #fff;
+  box-shadow: 0 20px 42px rgba(14, 22, 40, .18);
+}
+
+.team-gallery-arrow:active {
+  transform: translateY(-50%) scale(.96);
+}
+
+.team-gallery-arrow svg {
+  width: 22px;
+  height: 22px;
+}
+
+.team-gallery-prev {
+  left: 18px;
+}
+
+.team-gallery-next {
+  right: 18px;
+}
+
+.team-gallery-dots {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+}
+
+.team-gallery-dots button {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: rgba(21, 82, 255, .22);
+  transition: width .2s ease, background .2s ease;
+}
+
+.team-gallery-dots button.is-active {
+  width: 30px;
+  background: #1552ff;
 }
 
 @media (max-width: 767px) {
+  .team-panel {
+    padding: 14px;
+  }
+
   .team-photo-frame img {
     min-height: 420px;
+  }
+
+  .team-gallery-arrow {
+    width: 42px;
+    height: 42px;
+  }
+
+  .team-gallery-prev {
+    left: 12px;
+  }
+
+  .team-gallery-next {
+    right: 12px;
   }
 }
