@@ -243,67 +243,94 @@
 
     <!-- screen-03:start -->
     <section id="demo" class="screen-section inside-section bg-white px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
-      <div class="mx-auto max-w-[1440px]">
-        <div class="inside-hero grid items-end gap-10 lg:grid-cols-[minmax(0,.9fr)_minmax(420px,1.1fr)]">
-          <div>
-            <div class="text-[12px] font-extrabold uppercase text-brand/70">Загляните внутрь</div>
-            <h2 class="mt-4 text-[38px] font-extrabold leading-[1.08] text-black sm:text-[52px] lg:text-[64px]">
-              Как выглядит работа <span class="text-brand">в CinemaDoc</span>
-            </h2>
-            <p class="mt-6 max-w-[680px] text-[17px] font-medium leading-[1.75] text-muted sm:text-[18px]">
-              Посмотрите, как в платформе проходит весь путь: от создания компании и проекта до приглашения исполнителя и подписания договора через простую электронную подпись.
-            </p>
-          </div>
-
-          <figure class="inside-main-shot">
-            <img src="assets/inside/inside-01.webp" alt="Интерфейс CinemaDoc: создание компании" loading="lazy" />
-          </figure>
+      <div class="mx-auto max-w-[1320px]">
+        <div class="inside-heading mx-auto max-w-[860px] text-center">
+          <div class="text-[12px] font-extrabold uppercase text-brand/70">Загляните внутрь</div>
+          <h2 class="mt-4 text-[38px] font-extrabold leading-[1.08] text-black sm:text-[52px] lg:text-[64px]">
+            Как выглядит работа <span class="text-brand">в CinemaDoc</span>
+          </h2>
+          <p class="mx-auto mt-6 max-w-[760px] text-[17px] font-medium leading-[1.75] text-muted sm:text-[18px]">
+            Посмотрите, как в платформе проходит весь путь: от создания компании и проекта до приглашения исполнителя и подписания договора через простую электронную подпись.
+          </p>
         </div>
 
-        <div class="inside-steps mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-          <article class="inside-step-card">
-            <div class="inside-step-copy">
-              <span>01</span>
-              <h3>Создайте компанию</h3>
-              <p>Добавьте юридическое лицо или ИП один раз. Реквизиты будут подставляться в документы автоматически.</p>
-            </div>
-            <figure>
-              <img src="assets/inside/inside-01.webp" alt="Создание компании в CinemaDoc" loading="lazy" />
-            </figure>
-          </article>
+        <div class="inside-tabs mt-12 grid gap-6 lg:grid-cols-[410px_minmax(0,1fr)]">
+          <div class="inside-tabs-list" role="tablist" aria-label="Этапы работы в CinemaDoc">
+            <button id="inside-tab-company" class="inside-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="inside-panel-company" data-inside-tab="company">
+              <span class="inside-tab-number">01</span>
+              <span class="inside-tab-text">
+                <b>Создайте компанию</b>
+                <small>Добавьте юридическое лицо или ИП один раз.</small>
+              </span>
+            </button>
+            <button id="inside-tab-project" class="inside-tab" type="button" role="tab" aria-selected="false" aria-controls="inside-panel-project" data-inside-tab="project">
+              <span class="inside-tab-number">02</span>
+              <span class="inside-tab-text">
+                <b>Создайте проект</b>
+                <small>Соберите документы в одном рабочем пространстве.</small>
+              </span>
+            </button>
+            <button id="inside-tab-contractor" class="inside-tab" type="button" role="tab" aria-selected="false" aria-controls="inside-panel-contractor" data-inside-tab="contractor">
+              <span class="inside-tab-number">03</span>
+              <span class="inside-tab-text">
+                <b>Пригласите исполнителя</b>
+                <small>Отправьте ссылку на заполнение и проверку данных.</small>
+              </span>
+            </button>
+            <button id="inside-tab-sign" class="inside-tab" type="button" role="tab" aria-selected="false" aria-controls="inside-panel-sign" data-inside-tab="sign">
+              <span class="inside-tab-number">04</span>
+              <span class="inside-tab-text">
+                <b>Подпишите договор через ПЭП</b>
+                <small>Готовый документ остаётся внутри проекта.</small>
+              </span>
+            </button>
+          </div>
 
-          <article class="inside-step-card">
-            <div class="inside-step-copy">
-              <span>02</span>
-              <h3>Создайте проект</h3>
-              <p>Заведите съёмочный проект, выберите тип производства и соберите документы в одном рабочем пространстве.</p>
-            </div>
-            <figure>
-              <img src="assets/inside/inside-02.webp" alt="Создание проекта в CinemaDoc" loading="lazy" />
-            </figure>
-          </article>
+          <div class="inside-tabs-panels">
+            <article id="inside-panel-company" class="inside-tab-panel is-active" role="tabpanel" aria-labelledby="inside-tab-company" data-inside-panel="company">
+              <div class="inside-panel-copy">
+                <span>Этап 01</span>
+                <h3>Создайте компанию</h3>
+                <p>Добавьте юридическое лицо или ИП один раз. Реквизиты будут подставляться в документы автоматически.</p>
+              </div>
+              <figure class="inside-panel-shot">
+                <img src="assets/inside/inside-01.webp" alt="Создание компании в CinemaDoc" loading="lazy" />
+              </figure>
+            </article>
 
-          <article class="inside-step-card">
-            <div class="inside-step-copy">
-              <span>03</span>
-              <h3>Пригласите исполнителя</h3>
-              <p>Отправьте исполнителю ссылку, чтобы он заполнил данные, проверил договор и перешёл к подписанию.</p>
-            </div>
-            <figure>
-              <img src="assets/inside/inside-03.webp" alt="Приглашение исполнителя в CinemaDoc" loading="lazy" />
-            </figure>
-          </article>
+            <article id="inside-panel-project" class="inside-tab-panel" role="tabpanel" aria-labelledby="inside-tab-project" data-inside-panel="project" hidden>
+              <div class="inside-panel-copy">
+                <span>Этап 02</span>
+                <h3>Создайте проект</h3>
+                <p>Заведите съёмочный проект, выберите тип производства и соберите документы в одном рабочем пространстве.</p>
+              </div>
+              <figure class="inside-panel-shot">
+                <img src="assets/inside/inside-02.webp" alt="Создание проекта в CinemaDoc" loading="lazy" />
+              </figure>
+            </article>
 
-          <article class="inside-step-card">
-            <div class="inside-step-copy">
-              <span>04</span>
-              <h3>Подпишите договор через ПЭП</h3>
-              <p>Стороны подписывают договор онлайн простой электронной подписью, а готовый документ остаётся в проекте.</p>
-            </div>
-            <figure>
-              <img src="assets/inside/inside-04.webp" alt="Подписание договора через ПЭП в CinemaDoc" loading="lazy" />
-            </figure>
-          </article>
+            <article id="inside-panel-contractor" class="inside-tab-panel" role="tabpanel" aria-labelledby="inside-tab-contractor" data-inside-panel="contractor" hidden>
+              <div class="inside-panel-copy">
+                <span>Этап 03</span>
+                <h3>Пригласите исполнителя</h3>
+                <p>Отправьте исполнителю ссылку, чтобы он заполнил данные, проверил договор и перешёл к подписанию.</p>
+              </div>
+              <figure class="inside-panel-shot">
+                <img src="assets/inside/inside-03.webp" alt="Приглашение исполнителя в CinemaDoc" loading="lazy" />
+              </figure>
+            </article>
+
+            <article id="inside-panel-sign" class="inside-tab-panel" role="tabpanel" aria-labelledby="inside-tab-sign" data-inside-panel="sign" hidden>
+              <div class="inside-panel-copy">
+                <span>Этап 04</span>
+                <h3>Подпишите договор через ПЭП</h3>
+                <p>Стороны подписывают договор онлайн простой электронной подписью, а готовый документ остаётся в проекте.</p>
+              </div>
+              <figure class="inside-panel-shot">
+                <img src="assets/inside/inside-04.webp" alt="Подписание договора через ПЭП в CinemaDoc" loading="lazy" />
+              </figure>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -865,6 +892,27 @@
   </footer>
 
   <script>
+    const insideTabs = document.querySelectorAll('[data-inside-tab]');
+    const insidePanels = document.querySelectorAll('[data-inside-panel]');
+
+    const setInsideTab = (target) => {
+      insideTabs.forEach((button) => {
+        const isActive = button.dataset.insideTab === target;
+        button.classList.toggle('is-active', isActive);
+        button.setAttribute('aria-selected', String(isActive));
+      });
+
+      insidePanels.forEach((panel) => {
+        const isActive = panel.dataset.insidePanel === target;
+        panel.classList.toggle('is-active', isActive);
+        panel.hidden = !isActive;
+      });
+    };
+
+    insideTabs.forEach((button) => {
+      button.addEventListener('click', () => setInsideTab(button.dataset.insideTab));
+    });
+
     const moneyFormat = new Intl.NumberFormat('ru-RU');
     const packagePlans = [
       { name: 'Старт', docs: 15, price: 2990 },
