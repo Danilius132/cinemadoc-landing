@@ -1,60 +1,137 @@
-.dashboard-shell {
-  border: 1px solid rgba(207, 218, 236, .95);
-  background:
-    linear-gradient(#fff, #fff) padding-box,
-    linear-gradient(135deg, rgba(21, 82, 255, .22), rgba(218, 226, 244, .75)) border-box;
-  box-shadow: 0 28px 80px rgba(36, 55, 102, .12);
-}
-
-.dashboard-card {
-  border: 1px solid rgba(220, 228, 244, .95);
-  box-shadow: 0 14px 34px rgba(38, 57, 104, .06);
-  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
-}
-
-.dashboard-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(21, 82, 255, .24);
-  box-shadow: 0 22px 50px rgba(38, 57, 104, .10);
-}
-
-.dashboard-donut {
-  background: conic-gradient(#1552ff 0 61%, #75a8f6 61% 72%, #9fd2f5 72% 86%, #9ed7df 86% 94%, #ff6148 94% 100%);
-}
-
-.dashboard-donut::before {
-  content: "128\Aвсего";
-  white-space: pre;
-  display: grid;
-  place-items: center;
-  width: 104px;
-  height: 104px;
-  border-radius: 999px;
-  background: #fff;
-  color: #0E1628;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 1.2;
-  text-align: center;
-}
-
-.avatar-gradient {
-  background: linear-gradient(135deg, #e8edf8, #b7c6de);
-}
-
 #demo {
   background:
-    radial-gradient(circle at 14% 20%, rgba(21, 82, 255, .06), transparent 28%),
-    radial-gradient(circle at 88% 42%, rgba(21, 82, 255, .07), transparent 26%),
+    radial-gradient(circle at 12% 18%, rgba(45, 90, 253, .08), transparent 30%),
+    radial-gradient(circle at 88% 30%, rgba(81, 142, 255, .10), transparent 28%),
     linear-gradient(180deg, #fff 0%, #f6f9ff 100%);
 }
 
-#demo .dashboard-shell {
-  max-width: 1360px;
-  margin-left: auto;
-  margin-right: auto;
+#demo .inside-hero {
+  border: 1px solid rgba(214, 224, 242, .95);
+  border-radius: 30px;
+  padding: clamp(28px, 4vw, 54px);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, .98), rgba(246, 249, 255, .96)),
+    #fff;
+  box-shadow: 0 28px 80px rgba(36, 55, 102, .12);
 }
 
-#demo .dashboard-shell aside {
-  background: linear-gradient(180deg, #fff 0%, #f9fbff 100%);
+#demo .inside-main-shot {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(208, 219, 238, .92);
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 22px 54px rgba(38, 57, 104, .14);
+}
+
+#demo .inside-main-shot::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(9, 20, 44, .05));
+}
+
+#demo .inside-main-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#demo .inside-step-card {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(214, 224, 242, .95);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, .96);
+  box-shadow: 0 18px 44px rgba(38, 57, 104, .08);
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+#demo .inside-step-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(45, 90, 253, .32);
+  box-shadow: 0 26px 60px rgba(38, 57, 104, .13);
+}
+
+#demo .inside-step-copy {
+  padding: 24px 24px 20px;
+}
+
+#demo .inside-step-copy span {
+  display: inline-flex;
+  height: 34px;
+  min-width: 42px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #eef3ff;
+  color: #2D5AFD;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+#demo .inside-step-copy h3 {
+  margin-top: 18px;
+  color: #050915;
+  font-size: 23px;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+#demo .inside-step-copy p {
+  margin-top: 12px;
+  color: #64708A;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.62;
+  letter-spacing: 0;
+}
+
+#demo .inside-step-card figure {
+  margin-top: auto;
+  overflow: hidden;
+  border-top: 1px solid rgba(225, 232, 245, .95);
+  background: linear-gradient(180deg, #f8fbff, #eef3ff);
+}
+
+#demo .inside-step-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top left;
+  transition: transform .3s ease;
+}
+
+#demo .inside-step-card:hover img {
+  transform: scale(1.025);
+}
+
+@media (max-width: 1023px) {
+  #demo .inside-hero {
+    border-radius: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  #demo .inside-main-shot {
+    border-radius: 18px;
+  }
+
+  #demo .inside-step-card {
+    border-radius: 20px;
+  }
+
+  #demo .inside-step-copy {
+    padding: 22px 20px 18px;
+  }
+
+  #demo .inside-step-copy h3 {
+    font-size: 21px;
+  }
 }
